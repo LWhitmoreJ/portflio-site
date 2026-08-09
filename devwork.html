@@ -1,0 +1,451 @@
+<!--
+Name: Louis Whitmore Jr. 
+CMST 386 - Project 4 Game Dev History Page
+devwork.html - Showcases past game development work including demo
+video, past project cards, code snippets, and concept art
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Game development work by Louis Whitmore Jr. — Unity projects, published demos, GPS mobile apps, AR/VR experiences, and game design history.">
+    <meta name="keywords"
+        content="Louis Whitmore game development, Unity developer, C sharp, game design, AR VR, indie games, hack and slash demo, GPS mobile app">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Game Development Work | Louis Whitmore Jr.</title>
+
+</head>
+
+<body id="top">
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Dev</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+            <section class="text-center">
+                <div class="container">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="portfolio.html">Portfolio</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Game Dev</span>
+                    </nav>
+                    <header>
+                        <h1>Game Development</h1>
+                        <h2>Dev History</h2>
+                        <p>I have years of development using Unity Engine and other engines as a hobbyist and
+                            professionally. I have published demos, immersive apps, and am currently developing my
+                            flagship project, <strong>Two Little Wounds</strong>. Visit the <a
+                                href="gamedev.html"><em>Flagship Project page</em></a> to learn more.</p>
+                    </header>
+                </div>
+            </section>
+
+            <!-- Video Section -->
+            <section class="alt">
+                    <header class="text-center">
+                        <h2>Demo Footage</h2>
+                        <p>Gameplay footage from the original published 2D hack &amp; slash demo.</p>
+                    </header>
+                    <figure>
+                        <video controls poster="images/video-poster.jpg"
+                            aria-label="2D hack and slash demo gameplay footage">
+                            <source src="images/tlwdemo.mp4" type="video/mp4">
+                            Your browser does not support the video element.
+                            <p>You can <a href="images/demo-gameplay.mp4">download the demo video</a> instead.</p>
+                        </video>
+                        <figcaption>2D Hack &amp; Slash Demo — 3 stages, 2 boss fights, 2 playable characters</figcaption>
+                    </figure>
+            </section>
+
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Past Projects</h2>
+                    </header>
+                    <div class="grid-3">
+                        <article class="work-card">
+                                <figure><a href="images/4.jpg" target="_blank" aria-label="View full size image"><img
+                                            src="images/demo.jpg"
+                                            alt="2D pixel art hack and slash demo showing the Soldier character fighting enemies"
+                                            width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 2D</p>
+                                    <h3>2D Hack &amp; Slash Demo</h3>
+                                    <p>Published indie demo featuring 3 stages, 2 boss encounters, hack &amp; slash
+                                        combat, and 2 of the 4 planned playable characters.</p>
+                                    <h4>2023 &bull; Unity &bull; Published</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="images/VRxplorer-SubmergedCover.png" target="_blank"
+                                        aria-label="View full size image"><img
+                                            src="images/VRxplorer-SubmergedCover_sc.jpg"
+                                            alt="VR underwater exploration game with sea life built in Unity"
+                                            width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; Oculus &bull; AR/VR</p>
+                                    <h3>VRxplorer - Submerged</h3>
+                                    <p>Developed a A VR experience about aquatic exploration and marine biology.</p>
+                                    <h4>2024 &bull; Unity &bull; AR/VR</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="images/naviguntion_lg.png" target="_blank"
+                                        aria-label="View full size image"><img src="images/naviguntion.png"
+                                            alt="Car battle royale arena game featuring multiple vehicles" width="360"
+                                            height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 3D</p>
+                                    <h3>NaviGuntion</h3>
+                                    <p>A 3D car arena battle game where cars crash into one another and fire
+                                        projectiles. </p>
+                                    <h4>2024 &bull; Unity</h4>
+                                </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Code Snippets</h2>
+                        <p>A look at the C# scripts behind the gameplay mechanics.</p>
+                    </header>
+                    <div class="code-showcase">
+                        <div class="code-tab-bar">
+                            <button class="code-tab active" data-snippet="0">Player Movement</button>
+                            <button class="code-tab" data-snippet="1">Combat System</button>
+                            <button class="code-tab" data-snippet="2">Enemy AI</button>
+                        </div>
+                        <pre class="code-block" id="snippet-0">// PlayerMovement.cs
+using UnityEngine;
+public class PlayerMovement : MonoBehaviour {
+    public float moveSpeed = 5f;
+    private CharacterController controller;
+    void Start() { controller = GetComponent&lt;CharacterController&gt;(); }
+    void Update() {
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+        Vector3 dir = new Vector3(h, 0f, v).normalized;
+        controller.Move(dir * moveSpeed * Time.deltaTime);
+    }
+}</pre>
+                        <pre class="code-block" id="snippet-1" style="display:none;">// CombatSystem.cs
+using UnityEngine;
+public class CombatSystem : MonoBehaviour {
+    public int lightDamage = 15;
+    public int heavyDamage = 35;
+    public float cooldown = 0.4f;
+    private float lastAttack;
+    void Update() {
+        if (Input.GetButtonDown("Fire1") &amp;&amp; Time.time - lastAttack &gt;= cooldown)
+            Attack(lightDamage, 1.2f);
+        if (Input.GetButtonDown("Fire2") &amp;&amp; Time.time - lastAttack &gt;= cooldown)
+            Attack(heavyDamage, 1.8f);
+    }
+    void Attack(int dmg, float radius) {
+        lastAttack = Time.time;
+        Collider[] hits = Physics.OverlapSphere(transform.position + transform.forward, radius);
+        foreach (Collider h in hits)
+            h.GetComponent&lt;EnemyHealth&gt;()?.TakeDamage(dmg);
+    }
+}</pre>
+                        <pre class="code-block" id="snippet-2" style="display:none;">// Enemy.cs
+public class Enemy : MonoBehaviour
+{
+    .......
+    public void Attack()
+    {
+        Vector3 pos = transform.position;
+        pos += transform.right * attackOffset.x;
+        pos += transform.up * attackOffset.y;
+ 
+        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        
+        if (colInfo != null)
+        {
+            colInfo.GetComponent&lt;Player&gt;().TakeDamage(attackDamage);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        //enemy loses health from getting hit with damage
+        currentHealth -= damage;
+ 
+        if (!audioSource.isPlaying)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+ 
+        //Play hurt animation
+        animator.SetTrigger("Hurt");
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth);
+        }
+ 
+        if (currentHealth &lt;= 0)
+        {
+            Die();
+            
+            Instantiate(deathEffect, body.position, transform.rotation);
+        }
+ 
+        void Die()
+        {
+            Debug.Log("You have slain your foe!");
+            //Play Death animation
+ 
+            animator.SetTrigger("isDead");
+            
+            //Destroy this game object
+            GetComponent&lt;Collider2D&gt;().enabled = false;
+            this.enabled = false;
+ 
+            Destroy(this.gameObject, 1f);
+        }
+    }
+}</pre>
+                        <div class="code-nav">
+                            <button id="codePrev" class="btn btn-outline">&#8592; Prev</button>
+                            <span id="codeCounter" class="code-counter">1 / 3</span>
+                            <button id="codeNext" class="btn btn-outline">Next &#8594;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Concept Art</h2>
+                        <p>Visual direction work for Two Little Wounds and past projects.</p>
+                    </header>
+                    <div class="grid-3 gallery-grid">
+                        <figure>
+                            <img src="images/caknight.jpg"
+                                alt="Concept art for the Wardog-Human hybrid character showing beast and human duality"
+                                width="360" height="260">
+                            <figcaption>The Wardog-Human — character concept</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/environment_sc.jpg"
+                                alt="Environment design for transylvania inspired town"
+                                width="360" height="260">
+                            <figcaption>Sunset Transylvania town concept</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/tuncbattler.jpg"
+                                alt="Model form for a monstrous monster in the game"
+                                width="360" height="260">
+                            <figcaption>Model Figure - Monstrous Creature</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+        const mpt = document.getElementById('mobilePortfolioToggle');
+        const mps = document.getElementById('mobilePortfolioSub');
+        if (mpt) mpt.addEventListener('click', function () { mps.classList.toggle('open'); });
+        mobileNav.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+                hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false'); mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+        const dt = document.querySelector('.nav-dropdown-toggle');
+        const dm = document.querySelector('.nav-dropdown-menu');
+        const da = document.querySelector('.nav-dropdown-toggle .arrow');
+        if (dt && dm) {
+            dt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const open = dm.style.display === 'block';
+                dm.style.display = open ? 'none' : 'block';
+                da.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+                dt.setAttribute('aria-expanded', !open);
+            });
+            document.addEventListener('click', function () {
+                dm.style.display = 'none'; da.style.transform = 'rotate(0deg)';
+                dt.setAttribute('aria-expanded', 'false');
+            });
+            dm.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+        function updateFooterTime() {
+            const now = new Date();
+            const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', opts);
+        }
+        updateFooterTime(); setInterval(updateFooterTime, 1000);
+
+        const snippets = document.querySelectorAll('.code-block');
+        const tabs = document.querySelectorAll('.code-tab');
+        const counter = document.getElementById('codeCounter');
+        let current = 0;
+        function showSnippet(i) {
+            snippets.forEach(function (s, idx) { s.style.display = idx === i ? 'block' : 'none'; });
+            tabs.forEach(function (t, idx) { t.classList.toggle('active', idx === i); });
+            if (counter) counter.textContent = (i + 1) + ' / ' + snippets.length;
+            current = i;
+        }
+        const cn = document.getElementById('codeNext');
+        const cp = document.getElementById('codePrev');
+        if (cn) cn.addEventListener('click', function () { showSnippet((current + 1) % snippets.length); });
+        if (cp) cp.addEventListener('click', function () { showSnippet((current - 1 + snippets.length) % snippets.length); });
+        tabs.forEach(function (t, i) { t.addEventListener('click', function () { showSnippet(i); }); });
+    </script>
+</body>
+
+</html>

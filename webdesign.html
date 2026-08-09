@@ -1,0 +1,338 @@
+<!--
+Name: Louis Whitmore Jr. 
+CMST 386 - Project 4 Web Design Work Page
+webdesign.html - Showcases web design and development projects
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Web design and development work by Louis Whitmore Jr. — HTML, CSS, JavaScript projects 
+        including responsive sites, SCSS preprocessing, and course work from UMGC CMST 386.">
+    <meta name="keywords"
+        content="Louis Whitmore web design, HTML CSS JavaScript, responsive design, SCSS, web development portfolio, UMGC CMST 386">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Web Design Work | Louis Whitmore Jr.</title>
+
+</head>
+
+<body id="top">
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Dev</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+            <section class="text-center">
+                <div class="container">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="portfolio.html">Portfolio</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Web Design</span>
+                    </nav>
+                    <header>
+                        <h1>Web Design</h1>
+                        <h2>Development Work</h2>
+                        <p>Crafted from the ground up with semantic HTML5, CSS3, and JavaScript, this work covers 
+                            responsive layouts, CSS variables, form validation, accessibility-oriented markup, and 
+                            dynamic JavaScript elements.</p>
+                    </header>
+                </div>
+            </section>
+
+            <section class="alt">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Technologies</h2>
+                    </header>
+                    <div class="tech-icons-strip">
+                        <div class="tech-icon-item">
+                            <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-icon-item">
+                            <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-icon-item">
+                            <i class="fa-brands fa-js" aria-hidden="true"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-icon-item">
+                            <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                            <span>SCSS</span>
+                        </div>
+                        <div class="tech-icon-item">
+                            <i class="fa-brands fa-figma" aria-hidden="true"></i>
+                            <span>Figma</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Featured Project</h2>
+                    </header>
+                    <div class="grid-2">
+                        <figure>
+                            <a href="images/portfolioprj4.png" target="_blank"
+                                aria-label="View full size screenshot of this portfolio website">
+                                <img src="images/portfolioprj4.png"
+                                    alt="Screenshot of this professional portfolio website showing the navy and gold homepage hero section"
+                                    width="540" height="360">
+                            </a>
+                            <figcaption>Home Page of this portfolio</figcaption>
+                        </figure>
+                        <div>
+                            <h3>This Portfolio Website</h3>
+                            <p>Built entirely through a full UX process including persona research,
+                                wireframing, site map planning, and a complete design system before a single line of
+                                code was written.</p>
+                            <p>Features include fixed navigation with Portfolio dropdown, tabbed portfolio filter, 
+                                code snippet slideshow, validated contact form, responsive design at two breakpoints, 
+                                and a CSS architecture using custom properties.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0;">
+                                <span class="tech-pill-light">HTML5</span>
+                                <span class="tech-pill-light">CSS3</span>
+                                <span class="tech-pill-light">JavaScript</span>
+                                <span class="tech-pill-light">Responsive</span>
+                                <span class="tech-pill-light">Figma</span>
+                            </div>
+                            <h4>2026 &bull; CMST 386 Project 4</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>All Projects</h2>
+                    </header>
+                    <div class="grid-3">
+                        <article class="work-card">
+                                <figure><a href="images/mythweaver_large.png" target="_blank"
+                                        aria-label="View full size image"><img src="images/mythweaver.jpg"
+                                            alt="CMST 385 Project 4 website overing projects and services"
+                                            width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">HTML5 &bull; CSS3</p>
+                                    <h3>CMST 385 &mdash; Project 4</h3>
+                                    <p>Multi-page software developer studio site covering projects and services, built
+                                        with semantic HTML5 and CSS.</p>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><img src="images/386proj3-sc.png"
+                                        alt="CMST 386 Project 3 responsive design website with dark teal theme"
+                                        width="360" height="220"></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">SCSS &bull; Responsive &bull; JS</p>
+                                    <h3>CMST 386 &mdash; Project 3</h3>
+                                    <p>Responsive design and CSS preprocessing — SCSS variables, mixins, nesting, and
+                                        operators. Hamburger navigation and media queries for tablet and phone.</p>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><img src="images/portfolioprj4.png"
+                                        alt="Louis Whitmore Jr portfolio website thumbnail showing the full eleven page site structure"
+                                        width="360" height="220"></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">HTML5 &bull; CSS3 &bull; JS &bull; Figma</p>
+                                    <h3>Portfolio Website</h3>
+                                    <p>11-page professional portfolio built from scratch. Full UX process, JavaScript
+                                        animations, dropdown navigation, form validation, and responsive design.</p>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                    </div>
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Javascript Section -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+        const mpt = document.getElementById('mobilePortfolioToggle');
+        const mps = document.getElementById('mobilePortfolioSub');
+        if (mpt) mpt.addEventListener('click', function () { mps.classList.toggle('open'); });
+        mobileNav.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+                hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false'); mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+        const dt = document.querySelector('.nav-dropdown-toggle');
+        const dm = document.querySelector('.nav-dropdown-menu');
+        const da = document.querySelector('.nav-dropdown-toggle .arrow');
+        if (dt && dm) {
+            dt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const open = dm.style.display === 'block';
+                dm.style.display = open ? 'none' : 'block';
+                da.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+                dt.setAttribute('aria-expanded', !open);
+            });
+            document.addEventListener('click', function () {
+                dm.style.display = 'none'; da.style.transform = 'rotate(0deg)';
+                dt.setAttribute('aria-expanded', 'false');
+            });
+            dm.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+        function updateFooterTime() {
+            const now = new Date();
+            const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', opts);
+        }
+        updateFooterTime(); setInterval(updateFooterTime, 1000);
+
+    </script>
+</body>
+
+</html>

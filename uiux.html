@@ -1,0 +1,341 @@
+<!--
+Name: Louis Whitmore Jr. 
+CMST 386 - Project 4 UI/UX & Prototyping Page
+uiux.html - Showcases UI/UX design work including wireframes,
+mockups, Figma work, prototypes, and a featured case study
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="UI/UX design and prototyping work by Louis Whitmore Jr. — wireframes, mockups, Figma prototypes, and user experience 
+        design for web and game projects.">
+    <meta name="keywords"
+        content="Louis Whitmore UI UX design, wireframes, mockups, Figma, prototyping, user experience, web design, game UI design">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>UI/UX &amp; Prototyping | Louis Whitmore Jr.</title>
+
+</head>
+
+<body id="top">
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle active" aria-haspopup="true" aria-expanded="false">
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Development</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+            <section class="text-center">
+                <div class="container">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <a href="portfolio.html">Portfolio</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">UI/UX &amp; Prototyping</span>
+                    </nav>
+                    <header>
+                        <h1>UI/UX &amp; Prototyping</h1>
+                        <h2>Design Work</h2>
+                        <p>
+                            My UI/UX work spans game interface design, web application wireframes, interactive
+                            prototypes, and design system documentation.</p>
+                    </header>
+                </div>
+            </section>
+
+            <section class="alt">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>My Design Process</h2>
+                    </header>
+                    <div class="grid-4">
+                        <div class="process-strip">
+                            <div class="process-step">
+                                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                <h3>01. Research</h3>
+                                <p>Understanding the user, the goal, and the constraints before a single wireframe is
+                                    drawn.</p>
+                            </div>
+                            <div class="process-step">
+                                <i class="fa-solid fa-pencil" aria-hidden="true"></i>
+                                <h3>02. Wireframe</h3>
+                                <p>Low-fidelity layouts that establish structure, hierarchy, and content flow.</p>
+                            </div>
+                            <div class="process-step">
+                                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                                <h3>03. Prototype</h3>
+                                <p>High-fidelity interactive prototypes in Figma that simulate the real user experience.
+                                </p>
+                            </div>
+                            <div class="process-step">
+                                <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+                                <h3>04. Iterate</h3>
+                                <p>Refining based on feedback until the design solves the original problem clearly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Project Work</h2>
+                    </header>
+                    <div class="grid-3">
+                        <article class="work-card">
+                                <figure><a href="images/HomePage.png" target="_blank"
+                                        aria-label="View full size image"><img src="images/HomePage_sc.png"
+                                            alt="Low fidelity wireframe of this portfolio website homepage" width="360"
+                                            height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Wireframe</p>
+                                    <h3>Portfolio Homepage</h3>
+                                    <p>Low-fidelity wireframe establishing the layout and hierarchy for this portfolio
+                                        site.</p>
+                                    <h4>2026</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="images/ContactPage.png" target="_blank"
+                                        aria-label="View full size image"><img src="images/ContactPage_sc.png"
+                                            alt="Low fidelity wireframe of contact page showing two column form layout"
+                                            width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Wireframe</p>
+                                    <h3>Contact Page</h3>
+                                    <p>Two-column interior layout wireframe with form structure, fieldset groupings, and
+                                        breadcrumb nav.</p>
+                                    <h4>2026</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                            <a href="images/ineedhelp1.png" target="blank" aria-label="View full size image">
+                                <figure><img src="images/ineedhelp1_sc.jpg" 
+                                        alt="Interactive prototypes and user flow diagrams for web and app design projects" width="360"
+                                        height="220"></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Prototyping &bull; UI</p>
+                                    <h3>Interactive Prototypes</h3>
+                                    <p>Clickable Figma prototypes and user flow documentation for web and mobile design
+                                        briefs.</p>
+                                    <h4>2025</h4>
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="alt">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Featured Case Study</h2>
+                    </header>
+                    <div class="grid-2">
+                        <div>
+                            <h3>This Portfolio — Design to Build</h3>
+                            <p>This portfolio website went through a full UX design process before a being created. 
+                                Audience research, persona development, wireframing in Figma, a site map
+                                diagram, a complete design system, and high-fidelity mockups.</p>
+                            <p>The challenge was designing for both game industry recruiters
+                                who scan quickly and freelance clients who read carefully. The solution was a layered
+                                navigation architecture and a visual hierarchy that leads with work samples.</p>
+                            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;">
+                                <span class="tech-pill-light">Research</span>
+                                <span class="tech-pill-light">Wireframing</span>
+                                <span class="tech-pill-light">Figma</span>
+                                <span class="tech-pill-light">HTML/CSS/JS</span>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="images/HomePage.png"
+                                alt="Figma design file showing the portfolio website design system with color tokens and component library"
+                                width="520" height="360">
+                            <figcaption>Portfolio design system</figcaption>
+                        </figure>
+                    </div>
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+        const mpt = document.getElementById('mobilePortfolioToggle');
+        const mps = document.getElementById('mobilePortfolioSub');
+        if (mpt) mpt.addEventListener('click', function () { mps.classList.toggle('open'); });
+        mobileNav.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+                hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false'); mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+        const dt = document.querySelector('.nav-dropdown-toggle');
+        const dm = document.querySelector('.nav-dropdown-menu');
+        const da = document.querySelector('.nav-dropdown-toggle .arrow');
+        if (dt && dm) {
+            dt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const open = dm.style.display === 'block';
+                dm.style.display = open ? 'none' : 'block';
+                da.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+                dt.setAttribute('aria-expanded', !open);
+            });
+            document.addEventListener('click', function () {
+                dm.style.display = 'none'; da.style.transform = 'rotate(0deg)';
+                dt.setAttribute('aria-expanded', 'false');
+            });
+            dm.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+        function updateFooterTime() {
+            const now = new Date();
+            const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', opts);
+        }
+        updateFooterTime(); setInterval(updateFooterTime, 1000);
+
+    </script>
+</body>
+
+</html>

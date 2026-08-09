@@ -1,0 +1,269 @@
+<!--
+Name: Louis Whitmore Jr. 
+CMST 386 - Project 4 Sitemap
+sitemap.html - HTML sitemap linking all 11 pages with hierarchical structure.
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sitemap for louiswhitmorejr.com — a complete listing of all pages in the Louis Whitmore Jr. portfolio website with links and descriptions.">
+    <meta name="keywords"
+        content="Louis Whitmore sitemap, portfolio site map, all pages, web design portfolio structure">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Sitemap | Louis Whitmore Jr.</title>
+</head>
+
+<body id="top">
+
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Dev</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+            <section class="text-center">
+                <div class="container">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Sitemap</span>
+                    </nav>
+                    <header>
+                        <h1>Sitemap</h1>
+                        <h2>All Pages</h2>
+                        <p>A complete listing of every page on this site with links and descriptions.</p>
+                    </header>
+                    <ul class="sitemap-list">
+                        <li>
+                            <h3><a href="index.html">Home</a> <code>index.html</code></h3>
+                            <p>Hero image, skills strip, featured work cards, all-pages quick links, and JS date/time
+                                display.</p>
+                        </li>
+                        <li>
+                            <h3><a href="portfolio.html">Portfolio Overview</a> <code>portfolio.html</code></h3>
+                            <p>Complete grid of project cards across all disciplines with discipline filter tabs.</p>
+                            <ul class="sitemap-sublist">
+                                <li><a href="devwork.html">Game Dev History</a> <code>devwork.html</code> — Past game
+                                    development work, demo video, code snippets, concept art.</li>
+                                <li><a href="uiux.html">UI/UX &amp; Prototyping</a> <code>uiux.html</code> — Wireframes,
+                                    mockups, Figma work, prototypes, and featured case study.</li>
+                                <li><a href="webdesign.html">Web Design Work</a> <code>webdesign.html</code> — Web
+                                    projects built with HTML, CSS, and JavaScript.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3><a href="gamedev.html">Flagship Project — Two Little Wounds</a>
+                                <code>gamedev.html</code></h3>
+                            <p>Deep-dive showcase of Two Little Wounds including game overview, screenshots, development
+                                story, and tech stack.</p>
+                        </li>
+                        <li>
+                            <h3><a href="services.html">Services</a> <code>services.html</code></h3>
+                            <p>Freelance and contract services — game design, UI/UX, web design, immersive experiences,
+                                and creative direction.</p>
+                        </li>
+                        <li>
+                            <h3><a href="contact.html">Contact</a> <code>contact.html</code></h3>
+                            <p>Contact form with mailto action, JS validation, all required input types — text,
+                                textarea, select, radio, checkbox, submit.</p>
+                        </li>
+                        <li>
+                            <h3><a href="about.html">About</a> <code>about.html</code></h3>
+                            <p>Bio, skills strip, resume download link, and TroubleCub Games studio section. Accessible
+                                via homepage and footer.</p>
+                        </li>
+                        <li>
+                            <h3><a href="privacy.html">Privacy Policy</a> <code>privacy.html</code></h3>
+                            <p>250+ word privacy policy covering collection, usage, third-party, and cookie policy.
+                                Footer-linked on all pages.</p>
+                        </li>
+                        <li>
+                            <h3><a href="sitemap.html">Sitemap</a> <code>sitemap.html</code></h3>
+                            <p>This page. HTML sitemap plus XML sitemap file in the project root.</p>
+                        </li>
+                    </ul>
+
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+        const mpt = document.getElementById('mobilePortfolioToggle');
+        const mps = document.getElementById('mobilePortfolioSub');
+        if (mpt) mpt.addEventListener('click', function () { mps.classList.toggle('open'); });
+        mobileNav.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+                hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false'); mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+        const dt = document.querySelector('.nav-dropdown-toggle');
+        const dm = document.querySelector('.nav-dropdown-menu');
+        const da = document.querySelector('.nav-dropdown-toggle .arrow');
+        if (dt && dm) {
+            dt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const open = dm.style.display === 'block';
+                dm.style.display = open ? 'none' : 'block';
+                da.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+                dt.setAttribute('aria-expanded', !open);
+            });
+            document.addEventListener('click', function () {
+                dm.style.display = 'none'; da.style.transform = 'rotate(0deg)';
+                dt.setAttribute('aria-expanded', 'false');
+            });
+            dm.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+        function updateFooterTime() {
+            const now = new Date();
+            const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', opts);
+        }
+        updateFooterTime(); setInterval(updateFooterTime, 1000);
+
+    </script>
+</body>
+
+</html>

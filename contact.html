@@ -1,0 +1,361 @@
+<!--
+Name: Louis Whitmore Jr. 
+CMST 386 - Louis Whitmore Jr. - Project 4 Contact Page
+contact.html - Contact form with JS validation, and mailto email submission.
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Louis Whitmore Jr. — available for freelance game design, Unity development, 
+        UI/UX design, and web design projects. Reach out to discuss your project.">
+    <meta name="keywords"
+        content="contact Louis Whitmore, hire game designer, Unity developer for hire, freelance UI UX 
+        designer, web designer contact, TroubleCub Games">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Contact | Louis Whitmore Jr.</title>
+</head>
+
+<body id="top">
+
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Dev</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+            <section>
+                <div class="container">
+                    <nav class="breadcrumbs" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-sep">›</span>
+                        <span class="breadcrumb-current">Contact</span>
+                    </nav>
+                    <header class="text-center">
+                        <h1>Contact</h1>
+                        <h2>Let's Work Together</h2>
+                        <p>Whether you have a game concept, a design brief, or a website that needs building — fill out
+                            the form and I will get back to you as soon as possible.</p>
+                    </header>
+
+                    <div class="contact-grid">
+                        <div class="contact-form-col">
+                            <form id="contactForm" action="mailto:your.email@email.com" method="POST"
+                                enctype="text/plain" novalidate aria-label="Contact form">
+
+                                <fieldset class="form-fieldset">
+                                    <legend class="form-legend">Your Information</legend>
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Full Name<span class="required">*
+                                        </span></label>
+                                        <input type="text" id="name" name="name" class="form-input"
+                                            placeholder="Enter your full name" tabindex="1" aria-required="true"
+                                            autocomplete="name">
+                                        <span class="field-error" id="nameError" aria-live="polite"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="text" id="email" name="email" class="form-input"
+                                            placeholder="your@email.com" tabindex="2" autocomplete="email">
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="form-fieldset">
+                                    <legend class="form-legend">Your Inquiry</legend>
+                                    <div class="form-group">
+                                        <label for="service" class="form-label">Service Type</label>
+                                        <select id="service" name="service" class="form-input form-select" tabindex="3">
+                                            <option value="" disabled selected>Select a service...</option>
+                                            <option value="game-design">Game Design &amp; Development</option>
+                                            <option value="uiux">UI/UX Design &amp; Prototyping</option>
+                                            <option value="web-design">Web Design &amp; Development</option>
+                                            <option value="immersive">Immersive Experience (AR/VR)</option>
+                                            <option value="creative">Creative &amp; Visual Direction</option>
+                                            <option value="other">Other / Not Sure Yet</option>
+                                        </select>
+                                    </div>
+                                    <fieldset class="form-fieldset form-fieldset-inner">
+                                        <legend class="form-legend-sm">Project Timeline</legend>
+                                        <div class="radio-group">
+                                            <label class="radio-label"><input type="radio" name="timeline" value="asap"
+                                                    tabindex="4"> As soon as possible</label>
+                                            <label class="radio-label"><input type="radio" name="timeline"
+                                                    value="1-3months" tabindex="5"> 1&ndash;3 months</label>
+                                            <label class="radio-label"><input type="radio" name="timeline"
+                                                    value="flexible" tabindex="6"> Flexible</label>
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group">
+                                        <label for="message" class="form-label">Message <span class="required"
+                                                >*</span></label>
+                                        <textarea id="message" name="message" class="form-input form-textarea"
+                                            placeholder="Tell me about your project — what are you building, what do you need, and when?"
+                                            tabindex="7" aria-required="true" rows="6"></textarea>
+                                        <span class="field-error" id="messageError" aria-live="polite"></span>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="form-fieldset">
+                                    <legend class="form-legend">A Little More</legend>
+                                    <div class="form-group">
+                                        <p class="form-legend-sm">How did you find me? (Check all that apply)</p>
+                                        <label class="checkbox-label"><input type="checkbox" name="referral"
+                                                value="linkedin" tabindex="8"> LinkedIn</label>
+                                        <label class="checkbox-label"><input type="checkbox" name="referral"
+                                                value="youtube" tabindex="9"> YouTube</label>
+                                        <label class="checkbox-label"><input type="checkbox" name="referral"
+                                                value="referral" tabindex="10"> Referral from someone</label>
+                                        <label class="checkbox-label"><input type="checkbox" name="referral"
+                                                value="other" tabindex="11"> Other</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="consent" name="consent" value="yes" tabindex="12"
+                                                aria-required="true">
+                                            I consent to my submitted information being used to respond to my inquiry.
+                                            <span class="required">*</span>
+                                        </label>
+                                        <span class="field-error" id="consentError" aria-live="polite"></span>
+                                    </div>
+                                </fieldset>
+
+                                <p class="required-note"><span class="required">*</span> Required fields</p>
+                                <button type="submit" class="btn btn-primary form-submit" tabindex="13">
+                                    Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+                            </form>
+                        </div>
+
+                        <aside>
+                            <h3>Get In Touch</h3>
+                            <p>Available for freelance and contract work in game design, UI/UX, and web design. Response
+                                time is typically within 48 hours.</p>
+                            <div class="contact-info-list">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon"><i class="fa-solid fa-envelope"
+                                            aria-hidden="true"></i></div>
+                                    <div>
+                                        <h4>Email</h4>
+                                        <p>lwhitmore@outlook.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon"><i class="fa-solid fa-location-dot"
+                                            aria-hidden="true"></i></div>
+                                    <div>
+                                        <h4>Location</h4>
+                                        <p>Florida, USA &mdash; Available remotely worldwide</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon"><i class="fa-brands fa-linkedin"
+                                            aria-hidden="true"></i></div>
+                                    <div>
+                                        <h4>LinkedIn</h4>
+                                        <p>linkedin.com/in/yourprofile</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Section -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+        const mpt = document.getElementById('mobilePortfolioToggle');
+        const mps = document.getElementById('mobilePortfolioSub');
+        if (mpt) mpt.addEventListener('click', function () { mps.classList.toggle('open'); });
+        mobileNav.querySelectorAll('a').forEach(function (l) {
+            l.addEventListener('click', function () {
+                hamburger.classList.remove('open'); mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false'); mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+        const dt = document.querySelector('.nav-dropdown-toggle');
+        const dm = document.querySelector('.nav-dropdown-menu');
+        const da = document.querySelector('.nav-dropdown-toggle .arrow');
+        if (dt && dm) {
+            dt.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const open = dm.style.display === 'block';
+                dm.style.display = open ? 'none' : 'block';
+                da.style.transform = open ? 'rotate(0deg)' : 'rotate(180deg)';
+                dt.setAttribute('aria-expanded', !open);
+            });
+            document.addEventListener('click', function () {
+                dm.style.display = 'none'; da.style.transform = 'rotate(0deg)';
+                dt.setAttribute('aria-expanded', 'false');
+            });
+            dm.addEventListener('click', function (e) { e.stopPropagation(); });
+        }
+        function updateFooterTime() {
+            const now = new Date();
+            const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', opts);
+        }
+        updateFooterTime(); setInterval(updateFooterTime, 1000);
+
+        const form = document.getElementById('contactForm');
+        function showError(fId, eId, msg) {
+            const f = document.getElementById(fId); const e = document.getElementById(eId);
+            if (f) f.classList.add('input-error'); if (e) e.textContent = msg;
+        }
+        function clearError(fId, eId) {
+            const f = document.getElementById(fId); const e = document.getElementById(eId);
+            if (f) f.classList.remove('input-error'); if (e) e.textContent = '';
+        }
+        document.getElementById('name').addEventListener('input', function () { clearError('name', 'nameError'); });
+        document.getElementById('message').addEventListener('input', function () { clearError('message', 'messageError'); });
+        document.getElementById('consent').addEventListener('change', function () { document.getElementById('consentError').textContent = ''; });
+        form.addEventListener('submit', function (e) {
+            let valid = true;
+            if (!document.getElementById('name').value.trim()) { showError('name', 'nameError', 'Please enter your full name.'); valid = false; }
+            if (!document.getElementById('message').value.trim()) { showError('message', 'messageError', 'Please include a message.'); valid = false; }
+            if (!document.getElementById('consent').checked) { document.getElementById('consentError').textContent = 'You must check the consent box to submit.'; valid = false; }
+            if (!valid) { e.preventDefault(); alert('Please complete all required fields marked with an asterisk (*) before submitting.'); }
+        });
+    </script>
+</body>
+
+</html>

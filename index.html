@@ -1,0 +1,422 @@
+<!--
+Name: Louis Whitmore Jr.
+CMST 386 - Louis Whitmore Jr. - Project 4 Portolio Home Page 
+index.html - This file contains the html for the project 4 landing page and provides links to other sections of the website.
+Date: 05/05/26
+Version: 1.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project 4- Professional portfolio website & CV by Louis Whitmore Jr. CMST 386">
+    <meta name="keywords" content="Project 4, Portfolio, Louis Whitmore, Game Developer, development, web design">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Louis Whitmore Jr.">
+    <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <title>Louis Whitmore Jr. | Game Design & Developer Portfolio</title>
+</head>
+
+<body id="top">
+    <!-- Navigation -->
+    <nav class="site-nav" aria-label="Main navigation">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">LWJ<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+
+
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+
+                        Portfolio <span class="arrow">&#9660;</span>
+                    </button>
+                    <ul class="nav-dropdown-menu">
+                        <li><a href="portfolio.html">Overview</a></li>
+                        <li><a href="devwork.html">Game Development</a></li>
+                        <li><a href="uiux.html">UI/UX</a></li>
+                        <li><a href="webdesign.html">Web Design</a></li>
+                    </ul>
+
+                <li><a href="gamedev.html">Flagship Project</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="freefind-search">
+                <!-- start of freefind search box html -->
+                <table class="freefind-table">
+                    <tr>
+                        <td colspan=2 style="font-family: Arial, Helvetica, sans-serif; font-size: 7.5pt;">
+                            <form style="margin:0px; margin-top:4px;" action="https://search.freefind.com/find.html"
+                                method="get" accept-charset="utf-8" target="_self">
+                                <input type="hidden" name="si" value="37358046">
+                                <input type="hidden" name="pid" value="r">
+                                <input type="hidden" name="n" value="0">
+                                <input type="hidden" name="_charset_" value="">
+                                <input type="hidden" name="bcd" value="&#247;">
+                                <input type="text" name="query" size="15">
+                                <input type="submit" value="search">
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td
+                            style="text-align:left; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a style="text-decoration:none; color:gray;" href="https://www.freefind.com" rel="nofollow">site
+                                search</a><a style="text-decoration:none; color:gray;" href="https://www.freefind.com"
+                                rel="nofollow"> by
+                                <span style="color: #606060;">freefind</span></a>
+                        </td>
+
+                        <td
+                            style="text-align:right; font-family: Arial, Helvetica, sans-serif;	font-size: 7.5pt; padding-top:4px;">
+                            <a href="https://search.freefind.com/find.html?si=37358046&amp;pid=a">advanced</a>
+                        </td>
+                    </tr>
+                </table>
+                <!-- end of freefind search box html -->
+            </div>
+
+            <!-- Hamburger menu -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <button id="mobilePortfolioToggle">Portfolio &#9660;</button>
+                <ul class="mobile-nav-sub" id="mobilePortfolioSub">
+                    <li><a href="portfolio.html">Overview</a></li>
+                    <li><a href="devwork.html">Game Development</a></li>
+                    <li><a href="uiux.html">UI/UX</a></li>
+                    <li><a href="webdesign.html">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="gamedev.html">Flagship Project</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Freefind search inside hamburger menu — mobile only -->
+        <div class="mobile-search">
+            <form action="https://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+                <input type="hidden" name="si" value="37358046">
+                <input type="hidden" name="pid" value="r">
+                <input type="hidden" name="n" value="0">
+                <input type="hidden" name="_charset_" value="">
+                <input type="hidden" name="bcd" value="&#247;">
+                <input type="text" name="query" placeholder="Search site..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-btn">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <main>
+
+            <!-- Hero Section -->
+            <section class="hero" aria-label="Introduction">
+                <img src="images/AbstractGameBG.png" alt="Abstract game art background" class="hero-bg-img">
+
+                <div class="hero-content">
+                    <header>
+                        <span class="eyebrow">Game Designer &bull; Developer &bull; Creator</span>
+                        <h1>Louis<br><span>Whitmore Jr.</span></h1>
+                    </header>
+
+                    <p>World Builder | Experience Designer | Indie Studio Founder<br>
+                        UMGC Web &amp; Digital Design graduate, December 2026.</p>
+                    <a href="portfolio.html" class="btn btn-gold">View My Work</a>
+                    <p class="hero-datetime" id="datetime"></p>
+                </div>
+            </section>
+
+
+            <!-- Skill Strip Section -->
+            <section class="skills-strip" aria-label="Skills">
+                <div class="container">
+                    <header>
+                        <h2>What I Do</h2>
+                    </header>
+
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fa-brands fa-unity" aria-hidden="true"></i>
+                            <h3>Game Dev</h3>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-solid fa-users-gear" aria-hidden="true"></i>
+                            <h3>UI/UX</h3>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-solid fa-code" aria-hidden="true"></i>
+                            <h3>Web Design</h3>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fa-solid fa-compass-drafting" aria-hidden="true"></i>
+                            <h3>Prototyping</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Introduction Section -->
+            <section aria-label="Introduction" class="text-center">
+                <div class="container">
+                    <header>
+                        <h2>Who I Am</h2>
+                    </header>
+                    <p>I am a game designer, Unity developer, and web designer based in Florida, with a passion for
+                        building immersive, interactive experiences. I hope you enjoy navigating this portfolio
+                        showcasing the range of my work across game development, design, and web projects. Whether you
+                        are a recruiter, a potential client, or someone who stumbled in through a social link, I am glad
+                        you are here.</p>
+                </div>
+            </section>
+
+
+            <!-- Featured Work Section -->
+            <section class="alt" aria-label="Featured work">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Featured Work</h2>
+                        <p>A selection of projects across disciplines.</p>
+                    </header>
+
+                    <div class="grid-3">
+
+                        <article class="work-card">
+                            <a href="gamedev.html" aria-label="Two Little Wounds flagship game project">
+                                <figure>
+                                    <img src="images/twolittlewounds.jpg"
+                                        alt="Two Little Wounds flagship 3D action RPG concept art screenshot"
+                                        width="400" height="220">
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Game Development</p>
+                                    <h3>Two Little Wounds</h3>
+                                    <p>Flagship 3D action RPG dungeon-crawler in pre-production. Monster hunters,
+                                        vampires, and a world full of interesting creatures.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="work-card">
+                            <a href="uiux.html" aria-label="UI/UX design and prototyping work">
+                                <figure>
+                                    <img src="images/StoryboardingProj2v2.jpg"
+                                        alt="UI/UX wireframes and storyboarding mockup for AI counselor app" width="400"
+                                        height="220">
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">UI/UX &amp; Prototyping</p>
+                                    <h3>Design Work</h3>
+                                    <p>Wireframes, mockups, Figma prototypes, and design process documentation across
+                                        multiple projects.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                        <article class="work-card">
+                            <a href="webdesign.html" aria-label="Web design and development projects">
+                                <figure>
+                                    <img src="images/mythweaver.jpg"
+                                        alt="Web design projects built with HTML CSS and JavaScript" width="400"
+                                        height="220">
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Web Design</p>
+                                    <h3>Web Projects</h3>
+                                    <p>Sites and pages built with HTML, CSS, and JavaScript — including this portfolio
+                                        and UMGC coursework.</p>
+                                </div>
+                            </a>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- All Pages Links -->
+            <section aria-label="All pages" class="text-center">
+                <div class="container">
+                    <header>
+                        <h2>Explore</h2>
+                        <p>Every section of the site, one click away.</p>
+                    </header>
+
+                    <div class="pages-grid">
+
+                        <a href="portfolio.html" class="page-link-card">
+                            <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                            <h3>Portfolio</h3>
+                        </a>
+
+                        <a href="gamedev.html" class="page-link-card">
+                            <i class="fa-solid fa-dungeon" aria-hidden="true"></i>
+                            <h3>Flagship Project</h3>
+                        </a>
+
+                        <a href="devwork.html" class="page-link-card">
+                            <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                            <h3>Game Dev</h3>
+                        </a>
+
+                        <a href="uiux.html" class="page-link-card">
+                            <i class="fa-solid fa-pen-to-square" aria-hidden="true"></i>
+                            <h3>UI/UX</h3>
+                        </a>
+
+                        <a href="webdesign.html" class="page-link-card">
+                            <i class="fa-solid fa-sitemap" aria-hidden="true"></i>
+                            <h3>Web Design</h3>
+                        </a>
+
+                        <a href="services.html" class="page-link-card">
+                            <i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>
+                            <h3>Services</h3>
+                        </a>
+
+                        <a href="about.html" class="page-link-card">
+                            <i class="fa-sharp fa-solid fa-dna" aria-hidden="true"></i>
+                            <h3>About</h3>
+                        </a>
+
+                        <a href="contact.html" class="page-link-card">
+                            <i class="fa-solid fa-scroll" aria-hidden="true"></i>
+                            <h3>Contact</h3>
+                        </a>
+
+                    </div>
+
+                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-datetime" id="footerDatetime"></p>
+                <ul class="footer-links">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JavaScript Section -->
+    <script>
+        //  Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener('click', function () {
+            const isOpen = mobileNav.classList.contains('open');
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            hamburger.setAttribute('aria-expanded', !isOpen);
+            mobileNav.setAttribute('aria-hidden', isOpen);
+        });
+
+        const mobilePortfolioToggle = document.getElementById('mobilePortfolioToggle');
+        const mobilePortfolioSub = document.getElementById('mobilePortfolioSub');
+        mobilePortfolioToggle.addEventListener('click', function () {
+            mobilePortfolioSub.classList.toggle('open');
+        });
+
+        mobileNav.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                hamburger.classList.remove('open');
+                mobileNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
+                mobileNav.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        // Portfolio Dropdown
+        const dropdownToggle = document.querySelector('.nav-dropdown-toggle');
+        const dropdownMenu = document.querySelector('.nav-dropdown-menu');
+        const dropdownArrow = document.querySelector('.nav-dropdown-toggle .arrow');
+
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = isOpen ? 'none' : 'block';
+                dropdownArrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                dropdownToggle.setAttribute('aria-expanded', !isOpen);
+            });
+
+            document.addEventListener('click', function () {
+                dropdownMenu.style.display = 'none';
+                dropdownArrow.style.transform = 'rotate(0deg)';
+                dropdownToggle.setAttribute('aria-expanded', 'false');
+            });
+
+            dropdownMenu.addEventListener('click', function (e) {
+                e.stopPropagation();
+            });
+        }
+
+        // Date/Time
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('datetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', options);
+        }
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        function updateFooterTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const el = document.getElementById('footerDatetime');
+            if (el) el.textContent = now.toLocaleDateString('en-US', options);
+        }
+        updateFooterTime();
+        setInterval(updateFooterTime, 1000);
+    </script>
+
+</body>
+
+</html>
