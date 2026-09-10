@@ -1,10 +1,9 @@
 <!--
 Name: Louis Whitmore Jr. 
-CMST 386 - Project 4 Game Dev History Page
-devwork.html - Showcases past game development work including demo
-video, past project cards, code snippets, and concept art
-Date: 05/05/26
-Version: 1.3
+Game Dev History Page
+devwork.html - Showcases past game development work including demovideo, past project cards, code snippets, and concept art
+Date: 09/03/26
+Version: 1.5
 -->
 
 <!DOCTYPE html>
@@ -27,7 +26,7 @@ Version: 1.3
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/style.css">
@@ -62,7 +61,8 @@ Version: 1.3
                     </ul>
                 </li>
                 <li><a href="gamedev.html">Flagship Project</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -120,7 +120,8 @@ Version: 1.3
                 </ul>
             </li>
             <li><a href="gamedev.html">Flagship Project</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -163,18 +164,26 @@ Version: 1.3
             <!-- Video Section -->
             <section class="alt">
                     <header class="text-center">
-                        <h2>Demo Footage</h2>
+                        <h2>Featured Project</h2>
                         <p>Gameplay footage from the original published 2D hack &amp; slash demo.</p>
                     </header>
                     <figure>
                         <video controls poster="images/video-poster.jpg"
                             aria-label="2D hack and slash demo gameplay footage">
-                            <source src="images/tlwdemo.mp4" type="video/mp4">
+                            <source src="images/tlwdemo-optimized.webm" type="video/webm">
+                            <source src="images/tlwdemo-optimized.mp4" type="video/mp4">
                             Your browser does not support the video element.
-                            <p>You can <a href="images/demo-gameplay.mp4">download the demo video</a> instead.</p>
+                            <p>You can <a href="images/tlwdemo-optimized.mp4">download the demo video</a> instead.</p>
                         </video>
                         <figcaption>2D Hack &amp; Slash Demo — 3 stages, 2 boss fights, 2 playable characters</figcaption>
                     </figure>
+
+                    <div class="text-center">
+                        <iframe class="itch-embed" src="https://itch.io/embed/4897099" width="552" height="167"
+                            title="Two Little Wounds on itch.io" loading="lazy"></iframe>
+                        <p class="itch-fallback"><a href="https://troublecub-games.itch.io/two-little-wounds"
+                                target="_blank" rel="noopener">Two Little Wounds by TroubleCub Games on itch.io</a></p>
+                    </div>
             </section>
 
             <section>
@@ -184,46 +193,454 @@ Version: 1.3
                     </header>
                     <div class="grid-3">
                         <article class="work-card">
-                                <figure><a href="images/4.jpg" target="_blank" aria-label="View full size image"><img
-                                            src="images/demo.jpg"
-                                            alt="2D pixel art hack and slash demo showing the Soldier character fighting enemies"
-                                            width="360" height="220"></a></figure>
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="0"
+                                        aria-label="View 2D Hack & Slash Demo development media"><img 
+                                        src="images/demo.jpg" alt="2D pixel art hack and slash demo showing the 
+                                        Soldier character fighting enemies" width="360" height="220">
+                                    </button>
+                                </figure>
+
                                 <div class="card-body">
-                                    <p class="card-tag">Unity &bull; C# &bull; 2D</p>
+                                    <p class="card-tag">Unity &bull; C# &bull; 2D &bull; Pixel</p>
                                     <h3>2D Hack &amp; Slash Demo</h3>
                                     <p>Published indie demo featuring 3 stages, 2 boss encounters, hack &amp; slash
                                         combat, and 2 of the 4 planned playable characters.</p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
                                     <h4>2023 &bull; Unity &bull; Published</h4>
                                 </div>
                         </article>
+
                         <article class="work-card">
-                                <figure><a href="images/VRxplorer-SubmergedCover.png" target="_blank"
-                                        aria-label="View full size image"><img
-                                            src="images/VRxplorer-SubmergedCover_sc.jpg"
-                                            alt="VR underwater exploration game with sea life built in Unity"
-                                            width="360" height="220"></a></figure>
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="1"
+                                        aria-label="View VRxplorer - Submerged development media"><img 
+                                        src="images/VRxplorer-SubmergedCover_sc.jpg" alt="VR underwater exploration game 
+                                        with sea life built in Unity" width="360" height="220">
+                                    </button>
+                                </figure>
+
                                 <div class="card-body">
-                                    <p class="card-tag">Unity &bull; Oculus &bull; AR/VR</p>
+                                    <p class="card-tag">Unity &bull; Oculus &bull; AR/VR &bull; 3D</p>
                                     <h3>VRxplorer - Submerged</h3>
                                     <p>Developed a A VR experience about aquatic exploration and marine biology.</p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
                                     <h4>2024 &bull; Unity &bull; AR/VR</h4>
                                 </div>
                         </article>
                         <article class="work-card">
-                                <figure><a href="images/naviguntion_lg.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/naviguntion.png"
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="2"
+                                        aria-label="View NaviGuntion development media"><img src="images/naviguntion.png"
                                             alt="Car battle royale arena game featuring multiple vehicles" width="360"
-                                            height="220"></a></figure>
+                                            height="220">
+                                    </button>
+                                </figure>
+
                                 <div class="card-body">
                                     <p class="card-tag">Unity &bull; C# &bull; 3D</p>
                                     <h3>NaviGuntion</h3>
                                     <p>A 3D car arena battle game where cars crash into one another and fire
                                         projectiles. </p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
+                                    <h4>2025 &bull; Unity</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="3"
+                                        aria-label="View Exiled development media"><img src="images/young_monk_returns_sc.jpg"
+                                            alt="Young monk returns scene" width="360"
+                                            height="220">
+                                    </button>
+                                </figure>
+
+                                <div class="card-body">
+                                    <p class="card-tag">GDevelop5 &bull; 2D &bull; Pixel</p>
+                                    <h3>Exiled</h3>
+                                    <p>A 2D platformer game where the player navigates through various environments.</p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
+                                    <h4>2024 &bull; GDevelop5</h4>
+                                </div>
+                            </article>
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="4"
+                                        aria-label="View What Is Emotion development media"><img src="images/wie_sc.png"
+                                            alt="What Is Emotion scene" width="360"
+                                            height="220">
+                                    </button>
+                                </figure>
+                                
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 3D</p>
+                                    <h3>What Is Emotion</h3>
+                                    <p>An exploration of emotions through interactive media.</p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
+                                    <h4>2021 &bull; Unity</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="5"
+                                        aria-label="View Astroid Evade development media">
+                                        <img src="images/jj4.png" alt="Asteroids the player needs to evade." width="360" height="220">
+                                    </button>
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 3D</p>
+                                    <h3>Jumpman Jumpman</h3>
+                                    <p>Jumpman Jumpman is a one-button endless arcade survival game set in space. </p>
+                                    <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank"
+                                    rel="noopener">View Game on Itch &rarr;</a>
                                     <h4>2024 &bull; Unity</h4>
                                 </div>
                         </article>
-
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="6"
+                                        aria-label="View Wreck Your House VR development media">
+                                        <img src="images/wreckvr_sc.jpg" alt="VR experience where players can wreck houses in a virtual environment" width="360" height="220">
+                                    </button>
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 3D</p>
+                                    <h3>Wreck Your House VR</h3>
+                                    <p>A VR experience where players can wreck houses in a virtual environment.</p>
+                                    <h4>2024 &bull; Unity</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="7"
+                                        aria-label="View Learn Ancient Egypt in AR development media">
+                                        <img src="images/ar_sc.png" alt="Augmented reality experience to learn about Ancient Egypt" width="360" height="220">
+                                    </button>
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unity &bull; C# &bull; 3D</p>
+                                    <h3>Learn Ancient Egypt in AR</h3>
+                                    <p>An augmented reality experience to learn about Ancient Egypt.</p>
+                                    <h4>2024 &bull; Unity</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure>
+                                    <button type="button" class="project-thumb-btn" data-media-tab="8"
+                                        aria-label="View Unreal Engine First Person Shooter development media">
+                                        <img src="images/UnrealFPSPrototype.png" alt="First person shooter game built with Unreal Engine" width="360" height="220">
+                                    </button>
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">Unreal Engine &bull; C++ &bull; 3D</p>
+                                    <h3>Unreal Engine First Person Shooter</h3>
+                                    <p>A 3rd person shooter game built with Unreal Engine.</p>
+                                    <h4>2024 &bull; Unreal Engine</h4>
+                                </div>
+                        </article>
                     </div>
+                </div>
+            </section>
+
+            <section class="alt" id="dev-media">
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Development Media</h2>
+                        <p>Screenshots and art from each project — click a tab or a project image above to jump here</p>
+                    </header>
+                    <div class="code-showcase">
+                        <div class="media-tab-bar" id="mediaTabBar">
+                            <button class="media-tab active" data-media-index="0">2D Hack &amp; Slash Demo</button>
+                            <button class="media-tab" data-media-index="1">VRxplorer - Submerged</button>
+                            <button class="media-tab" data-media-index="2">NaviGuntion</button>
+                            <button class="media-tab" data-media-index="3">Exiled</button>
+                            <button class="media-tab" data-media-index="4">What Is Emotion</button>
+                            <button class="media-tab" data-media-index="5">Jumpman Jumpman</button>
+                            <button class="media-tab" data-media-index="6">Wreck Your House VR</button>
+                            <button class="media-tab" data-media-index="7">Learn Ancient Egypt in AR</button>
+                            <button class="media-tab" data-media-index="8">Unreal Engine 3rd Person Shooter</button>
+                        </div>
+
+                        <div class="media-nav">
+                            <button class="btn btn-outline media-prev-btn">&#8592; Prev</button>
+                            <span class="media-counter media-counter-el">1 / 9</span>
+                            <button class="btn btn-outline media-next-btn">Next &#8594;</button>
+                        </div>
+
+                        <!--2D Hack & Slash Demo-->
+                        <div class="media-panel" id="media-0">
+                            <video class="media-video" autoplay loop muted playsinline poster="images/demo.jpg"
+                                aria-label="2D hack and slash demo gameplay footage">
+                                <source src="images/tlw-hero.webm" type="video/webm">
+                                <source src="images/tlw-hero.mp4" type="video/mp4">
+                                Your browser does not support the video element.
+                                <p>You can <a href="images/tlw-hero.mp4">download the demo video</a> instead.</p>
+                            </video>
+                            <p class="media-desc">Published indie demo featuring 3 stages, 2 boss encounters, hack
+                                &amp; slash combat, and 2 of the 4 planned playable characters.
+                            </p>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/1.jpg" alt="Hero fighting fiery boss Fianna in underground cavern stage of 2D hack and slash demo">
+                                    <figcaption>Archer vs. enraged boss Fianna, cavern stage</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/uiexample.jpg" alt="In-game transition screen narrating the story between stages">
+                                    <figcaption>In-game story transition screen</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/3.jpg" alt="Soldier hero running along battlements overlooking mountains">
+                                    <figcaption>Soldier running along battlements</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/2HeroesIG.jpg" alt="Pixel models of Soldier and Stalker player characters">
+                                    <figcaption>Pixel models of Soldier and Stalker player characters</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--VRexplorer: Submerged-->
+                        <div class="media-panel" id="media-1" style="display:none;">
+                            <figure>
+                                <img src="images/VRxplorer-SubmergedCover_sc.jpg" alt="VR underwater exploration game with sea life built in Unity">
+                                <figcaption>Developed a A VR experience about aquatic exploration and marine biology.</figcaption>
+                            </figure>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/VRxplorerSS2.png" alt="VR underwater exploration game with sea life built in Unity">
+                                    <figcaption>Developed a A VR experience about aquatic exploration and marine biology.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/VRxplorerSS1.png" alt="VR underwater exploration game with sea life built in Unity">
+                                    <figcaption>Developed a A VR experience about aquatic exploration and marine biology.</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--NaviGuntion-->
+                        <div class="media-panel" id="media-2" style="display:none;">
+                            <video class="media-video" autoplay loop muted playsinline poster="images/naviguntion.png"
+                                aria-label="NaviGuntion: Car Royale gameplay footage">
+                                <source src="images/naviguntion-hero.webm" type="video/webm">
+                                <source src="images/naviguntion-hero.mp4" type="video/mp4">
+                                Your browser does not support the video element.
+                                <p>You can <a href="images/naviguntion-hero.mp4">download the demo video</a> instead.</p>
+                            </video>
+                            <p class="media-desc">Published indie demo featuring 3 stages, 2 boss encounters, hack
+                                &amp; slash combat, and 2 of the 4 planned playable characters.
+                            </p>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/naviguntion_lg.png" alt="3D car arena battle game featuring multiple vehicles">
+                                    <figcaption>A 3D car arena battle game where cars crash into one another and fire projectiles.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/ngss1.png" alt="3D car arena battle game featuring multiple vehicles">
+                                    <figcaption>A 3D car arena battle game where cars crash into one another and fire projectiles.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/ngss2.png" alt="3D car arena battle game featuring multiple vehicles">
+                                    <figcaption>A 3D car arena battle game where cars crash into one another and fire projectiles.</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--Exiled-->
+                        <div class="media-panel" id="media-3" style="display:none;">
+                            <video class="media-video" autoplay loop muted playsinline poster="images/young_monk_returns_sc.jpg"
+                                aria-label="Exiled gameplay footage">
+                                <source src="images/exiled-hero.webm" type="video/webm">
+                                <source src="images/exiled-hero.mp4" type="video/mp4">
+                                Your browser does not support the video element.
+                                <p>You can <a href="images/exiled-hero.mp4">download the demo video</a> instead.</p>
+                            </video>
+                            <p class="media-desc">Published indie demo featuring 3 stages, 2 boss encounters, hack
+                                &amp; slash combat, and 2 of the 4 planned playable characters.
+                            </p>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/young_monk_returns_sc.jpg" alt="Young monk returns scene">
+                                    <figcaption>A 2D platformer game where the player navigates through various environments.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/ExiledItch2.jpg" alt="Monk tutorial on using bo staff">
+                                    <figcaption>Monk tutorial on using bo staff.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/exiled-hero.jpg" alt="Monk running through mountain pass level">
+                                    <figcaption>Monk running through mountain pass level.</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/ExiledItch3.jpg" alt="In-game pause menu">
+                                    <figcaption>In-game pause menu.</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--What Is Emotion?-->
+                        <div class="media-panel" id="media-4" style="display:none;">
+                            <video class="media-video" autoplay loop muted playsinline poster="images/WIEclip.mp4"
+                                aria-label="Video showing flying and navigating around obstacles">
+                                <source src="images/WIEclip.mp4" type="video/mp4">
+                                Your browser does not support the video element.
+                                <p>You can <a href="images/WIEclip.mp4">download the demo video</a> instead.</p>
+                            </video>
+                            <p class="media-desc">Earlier level that where player can choose from multiple paths and navigate around obstacles.
+                            </p>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/WhatIsEmotion.png" alt="Platformer level showing moving platforms and lighting">
+                                    <figcaption>Platformer level showing moving platforms and lighting</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/wie_sc.png" alt="Platformer level showing moving platforms and lighting">
+                                    <figcaption>Platformer level showing moving platforms and lighting</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--Jumpman Jumpman-->
+                        <div class="media-panel" id="media-5" style="display:none;">
+                            <figure>
+                                <img src="images/jj4.png" alt="Asteroids the player needs to evade.">
+                                <figcaption>Jumpman Jumpman is a one-button endless arcade survival game set in space. </figcaption>
+                            </figure>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/jj.png" alt="Initial screen upon loading game">
+                                    <figcaption>Initial screen upon loading game</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/Astroid_Evade_sc.jpg" alt="Jumpman jumpman layout on mobile device">
+                                    <figcaption>Jumpman jumpman layout on mobile device</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/jj3.png" alt="Early blocked version of Jumpman Jumpman">
+                                    <figcaption>Early blocked version of Jumpman Jumpman</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--Wreck Your House VR-->
+                        <div class="media-panel" id="media-6" style="display:none;">
+                            <figure>
+                                <img src="images/wreckvr.png" alt="VR underwater exploration game with sea life built in Unity">
+                                <figcaption>VR experience where players can wreck houses in a virtual environment</figcaption>
+                            </figure>
+                            <div class="media-gallery-grid">
+                                <figure>
+                                    <img src="images/wyh1.png" alt="VR experience where players can wreck houses in a virtual environment">
+                                    <figcaption>VR experience where players can wreck houses in a virtual environment</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/wyh2.png" alt="VR experience where players can wreck houses in a virtual environment">
+                                    <figcaption>VR experience where players can wreck houses in a virtual environment</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/wyh3.png" alt="VR experience where players can wreck houses in a virtual environment">
+                                    <figcaption>VR experience where players can wreck houses in a virtual environment</figcaption>
+                                </figure>
+                            </div>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--Learn Ancient Egypt in AR-->
+                        <div class="media-panel" id="media-7" style="display:none;">
+                            <img src="images/ar_sc.png" alt="Augmented reality experience to learn about Ancient Egypt">
+                            <p class="media-desc">An augmented reality experience to learn about Ancient Egypt.</p>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <!--Unreal Engine First Person Shooter-->
+                        <div class="media-panel" id="media-8" style="display:none;">
+                            <img src="images/UnrealFPSPrototype.png" alt="First person shooter game built with Unreal Engine">
+                            <p class="media-desc">A first person shooter game built with Unreal Engine.</p>
+                            <a href="https://troublecub-games.itch.io/" class="card-link" target="_blank" rel="noopener">View Game on Itch &rarr;</a>
+                        </div>
+
+                        <div class="media-nav">
+                            <button class="btn btn-outline media-prev-btn">&#8592; Prev</button>
+                            <span class="media-counter media-counter-el">1 / 9</span>
+                            <button class="btn btn-outline media-next-btn">Next &#8594;</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Game Design Documentation</h2>
+                        <p>Pages from GDDs I've written to plan and structure gameplay systems.</p>
+                    </header>
+                    <div class="gdd-groups">
+                        <div class="gdd-group">
+                            <h3 class="gdd-group-title">Two Little Wounds</h3>
+                            <figure class="gdd-figure">
+                                <img src="images/missiongdd.png"
+                                    alt="Structure from part of level 1 of the GDD for a 2D hack and slash game.">
+                                <figcaption>Structure from part of level 1 of the GDD for a 2D hack and slash game.</figcaption>
+                            </figure>
+                            <figure class="gdd-figure">
+                                <img src="images/wyrmhole-combat-sketch.jpg"
+                                    alt="Camera and combat sketch from the GDD for a 2D hack and slash game.">
+                                <figcaption>Camera and combat sketch from the GDD for a 2D hack and slash game.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gdd-group">
+                            <h3 class="gdd-group-title">Exiled</h3>
+                            <figure class="gdd-figure">
+                                <img src="images/gdd-exiled-excerpt.jpg"
+                                    alt="Movement controls from the GDD for Exiled, a 2D fighting game">
+                                <figcaption>Movement controls from the GDD for Exiled, a 2D fighting game</figcaption>
+                            </figure>
+                            <figure class="gdd-figure">
+                                <img src="images/gdd-exiled-excerpt-2.jpg"
+                                    alt="Part of level design from the GDD for Exiled, a 2D fighting game">
+                                <figcaption>Part of level design from the GDD for Exiled, a 2D fighting game</figcaption>
+                            </figure>
+                        </div>
+                        <div class="gdd-group">
+                            <h3 class="gdd-group-title">VR Game</h3>
+                            <figure class="gdd-figure">
+                                <img src="images/whlvl1.png" alt="Level chart from GDD for VR action platformer game">
+                                <figcaption>Level chart from GDD for VR action platformer game</figcaption>
+                            </figure>
+                            <figure class="gdd-figure">
+                                <img src="images/whlvl2.png" alt="Level of mechanics chart from GDD for VR action platformer game">
+                                <figcaption>Level of mechanics chart from GDD for VR action platformer game</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!---
+            <section>
+                <div class="container">
+                    <header class="text-center">
+                        <h2>Production Planning</h2>
+                        <p>A working planner I keep for Two Little Wounds &mdash; research notes, design decisions,
+                            and milestones in one place so the prototype stays scoped.</p>
+                    </header>
+                    <figure class="planner-figure">
+                        <img class="lightbox-img" src="images/tlw-prototype-planner_sc.jpg"
+                            data-full="images/tlw-prototype-planner.jpg"
+                            alt="Two Little Wounds Prototype Planner showing co-op design decisions including the companion drag system and revive system">
+                        <figcaption>Prototype Planner &mdash; co-op design decisions drawn from Diablo 4 research.
+                            Built as a personal tool with AI-assisted code; the research and design content is mine.</figcaption>
+                    </figure>
                 </div>
             </section>
 
@@ -341,42 +758,15 @@ public class Enemy : MonoBehaviour
                 </div>
             </section>
 
-            <section>
-                <div class="container">
-                    <header class="text-center">
-                        <h2>Concept Art</h2>
-                        <p>Visual direction work for Two Little Wounds and past projects.</p>
-                    </header>
-                    <div class="grid-3 gallery-grid">
-                        <figure>
-                            <img src="images/caknight.jpg"
-                                alt="Concept art for the Wardog-Human hybrid character showing beast and human duality"
-                                width="360" height="260">
-                            <figcaption>The Wardog-Human — character concept</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/environment_sc.jpg"
-                                alt="Environment design for transylvania inspired town"
-                                width="360" height="260">
-                            <figcaption>Sunset Transylvania town concept</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="images/tuncbattler.jpg"
-                                alt="Model form for a monstrous monster in the game"
-                                width="360" height="260">
-                            <figcaption>Model Figure - Monstrous Creature</figcaption>
-                        </figure>
-                    </div>
-                    <a href="#top" class="back-to-top">&#8593; Back to top</a>
-                </div>
-            </section>
+        -->
+
         </main>
     </div>
 
     <footer class="site-footer">
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-copy"><em>&copy; 2026 Louis Whitmore Jr. All rights reserved.</em></p>
                 <p class="footer-datetime" id="footerDatetime"></p>
                 <ul class="footer-links">
                     <li><a href="about.html">About</a></li>
@@ -445,6 +835,80 @@ public class Enemy : MonoBehaviour
         if (cn) cn.addEventListener('click', function () { showSnippet((current + 1) % snippets.length); });
         if (cp) cp.addEventListener('click', function () { showSnippet((current - 1 + snippets.length) % snippets.length); });
         tabs.forEach(function (t, i) { t.addEventListener('click', function () { showSnippet(i); }); });
+
+        // Development Media tabs
+        const mediaPanels = document.querySelectorAll('.media-panel');
+        const mediaTabs = document.querySelectorAll('.media-tab');
+        const mediaCounters = document.querySelectorAll('.media-counter-el');
+        let mediaCurrent = 0;
+        function showMediaTab(i) {
+            mediaPanels.forEach(function (p, idx) { p.style.display = idx === i ? 'block' : 'none'; });
+            mediaTabs.forEach(function (t, idx) { t.classList.toggle('active', idx === i); });
+            mediaCounters.forEach(function (el) { el.textContent = (i + 1) + ' / ' + mediaPanels.length; });
+            mediaCurrent = i;
+        }
+        document.querySelectorAll('.media-next-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () { showMediaTab((mediaCurrent + 1) % mediaPanels.length); });
+        });
+        document.querySelectorAll('.media-prev-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () { showMediaTab((mediaCurrent - 1 + mediaPanels.length) % mediaPanels.length); });
+        });
+        mediaTabs.forEach(function (t, i) { t.addEventListener('click', function () { showMediaTab(i); }); });
+
+        // Past Project thumbnails scroll to and select the matching Development Media tab
+        document.querySelectorAll('.project-thumb-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const idx = parseInt(btn.getAttribute('data-media-tab'), 10);
+                showMediaTab(idx);
+                const target = document.getElementById('dev-media');
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+
+    <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+            <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">&times;</button>
+            <img id="lightboxImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="">
+            <p class="lightbox-caption" id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const overlay = document.getElementById('lightboxOverlay');
+            const lightboxImg = document.getElementById('lightboxImage');
+            const lightboxCaption = document.getElementById('lightboxCaption');
+            const closeBtn = document.getElementById('lightboxClose');
+
+            function openLightbox(src, alt, captionText) {
+                lightboxImg.src = src;
+                lightboxImg.alt = alt || '';
+                lightboxCaption.textContent = captionText || '';
+                overlay.classList.add('active');
+            }
+
+            function closeLightbox() {
+                overlay.classList.remove('active');
+                lightboxImg.src = '';
+            }
+
+            document.querySelectorAll('.media-gallery-grid img, .gdd-figure img, .lightbox-img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    const figcaption = img.parentElement.querySelector('figcaption');
+                    const src = img.getAttribute('data-full') || img.getAttribute('src');
+                    openLightbox(src, img.getAttribute('alt'), figcaption ? figcaption.textContent : '');
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) closeLightbox();
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeLightbox();
+            });
+        })();
     </script>
 </body>
 

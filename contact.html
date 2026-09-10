@@ -1,9 +1,9 @@
 <!--
 Name: Louis Whitmore Jr. 
-CMST 386 - Louis Whitmore Jr. - Project 4 Contact Page
+Louis Whitmore Jr. - Portfolio Contact Page
 contact.html - Contact form with JS validation, and mailto email submission.
-Date: 05/05/26
-Version: 1.3
+Date: 08/27/26
+Version: 1.4
 -->
 
 <!DOCTYPE html>
@@ -13,11 +13,11 @@ Version: 1.3
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Contact Louis Whitmore Jr. — available for freelance game design, Unity development, 
-        UI/UX design, and web design projects. Reach out to discuss your project.">
+        content="Contact Louis Whitmore Jr. — game designer, Unity developer, and UI/UX designer open to
+        junior roles and collaboration. Get in touch about hiring or a project.">
     <meta name="keywords"
-        content="contact Louis Whitmore, hire game designer, Unity developer for hire, freelance UI UX 
-        designer, web designer contact, TroubleCub Games">
+        content="contact Louis Whitmore, junior game designer, Unity developer, QA tester, UI UX designer,
+        narrative designer, TroubleCub Games">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Louis Whitmore Jr.">
     <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
@@ -26,7 +26,7 @@ Version: 1.3
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/style.css">
@@ -59,7 +59,8 @@ Version: 1.3
                     </ul>
                 </li>
                 <li><a href="gamedev.html">Flagship Project</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
 
@@ -117,7 +118,8 @@ Version: 1.3
                 </ul>
             </li>
             <li><a href="gamedev.html">Flagship Project</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -146,15 +148,15 @@ Version: 1.3
                     </nav>
                     <header class="text-center">
                         <h1>Contact</h1>
-                        <h2>Let's Work Together</h2>
-                        <p>Whether you have a game concept, a design brief, or a website that needs building — fill out
-                            the form and I will get back to you as soon as possible.</p>
+                        <h2>Let&rsquo;s Talk</h2>
+                        <p>Hiring, collaborating, or just curious about a project on this site &mdash; send me a note
+                            and I will get back to you as soon as possible.</p>
                     </header>
 
                     <div class="contact-grid">
                         <div class="contact-form-col">
-                            <form id="contactForm" action="mailto:your.email@email.com" method="POST"
-                                enctype="text/plain" novalidate aria-label="Contact form">
+                            <form id="contactForm" action="https://formspree.io/f/mnpqlwpo" method="POST"
+                                novalidate aria-label="Contact form">
 
                                 <fieldset class="form-fieldset">
                                     <legend class="form-legend">Your Information</legend>
@@ -167,9 +169,12 @@ Version: 1.3
                                         <span class="field-error" id="nameError" aria-live="polite"></span>
                                     </div>
                                     <div class="form-group">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input type="text" id="email" name="email" class="form-input"
-                                            placeholder="your@email.com" tabindex="2" autocomplete="email">
+                                        <label for="email" class="form-label">Email Address<span class="required">*
+                                        </span></label>
+                                        <input type="email" id="email" name="email" class="form-input"
+                                            placeholder="your@email.com" tabindex="2" aria-required="true"
+                                            autocomplete="email">
+                                        <span class="field-error" id="emailError" aria-live="polite"></span>
                                     </div>
                                 </fieldset>
 
@@ -233,23 +238,26 @@ Version: 1.3
                                 </fieldset>
 
                                 <p class="required-note"><span class="required">*</span> Required fields</p>
-                                <button type="submit" class="btn btn-primary form-submit" tabindex="13">
+                                <button type="submit" class="btn btn-primary form-submit" id="formSubmit" tabindex="13">
                                     Send Message <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                                 </button>
+                                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
                             </form>
                         </div>
 
                         <aside>
                             <h3>Get In Touch</h3>
-                            <p>Available for freelance and contract work in game design, UI/UX, and web design. Response
-                                time is typically within 48 hours.</p>
+                            <p>I&rsquo;m open to junior and entry-level roles in game design, QA, production, UI/UX, and
+                                narrative. Always happy to hear from other developers, artists, and writers
+                                looking to collaborate. If you have a question about anything in my portfolio, ask away.
+                                I usually reply within 48 hours.</p>
                             <div class="contact-info-list">
                                 <div class="contact-info-item">
                                     <div class="contact-info-icon"><i class="fa-solid fa-envelope"
                                             aria-hidden="true"></i></div>
                                     <div>
                                         <h4>Email</h4>
-                                        <p>lwhitmore@outlook.com</p>
+                                        <p><a href="mailto:troublecubgames@gmail.com">troublecubgames@gmail.com</a></p>
                                     </div>
                                 </div>
                                 <div class="contact-info-item">
@@ -265,7 +273,8 @@ Version: 1.3
                                             aria-hidden="true"></i></div>
                                     <div>
                                         <h4>LinkedIn</h4>
-                                        <p>linkedin.com/in/yourprofile</p>
+                                        <p><a href="https://www.linkedin.com/in/louis-whitmore-jr/" target="_blank"
+                                                rel="noopener">linkedin.com/in/louis-whitmore-jr</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +289,7 @@ Version: 1.3
     <footer class="site-footer">
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-copy"><em>&copy; 2026 Louis Whitmore Jr. All rights reserved.</em></p>
                 <p class="footer-datetime" id="footerDatetime"></p>
                 <ul class="footer-links">
                     <li><a href="about.html">About</a></li>
@@ -345,15 +354,61 @@ Version: 1.3
             const f = document.getElementById(fId); const e = document.getElementById(eId);
             if (f) f.classList.remove('input-error'); if (e) e.textContent = '';
         }
+        const statusEl = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('formSubmit');
+
         document.getElementById('name').addEventListener('input', function () { clearError('name', 'nameError'); });
+        document.getElementById('email').addEventListener('input', function () { clearError('email', 'emailError'); });
         document.getElementById('message').addEventListener('input', function () { clearError('message', 'messageError'); });
         document.getElementById('consent').addEventListener('change', function () { document.getElementById('consentError').textContent = ''; });
-        form.addEventListener('submit', function (e) {
+
+        function validateForm() {
             let valid = true;
+            const email = document.getElementById('email').value.trim();
             if (!document.getElementById('name').value.trim()) { showError('name', 'nameError', 'Please enter your full name.'); valid = false; }
+            if (!email) { showError('email', 'emailError', 'Please enter your email address.'); valid = false; }
+            else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', 'emailError', 'Please enter a valid email address.'); valid = false; }
             if (!document.getElementById('message').value.trim()) { showError('message', 'messageError', 'Please include a message.'); valid = false; }
             if (!document.getElementById('consent').checked) { document.getElementById('consentError').textContent = 'You must check the consent box to submit.'; valid = false; }
-            if (!valid) { e.preventDefault(); alert('Please complete all required fields marked with an asterisk (*) before submitting.'); }
+            return valid;
+        }
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            statusEl.className = 'form-status';
+            statusEl.textContent = '';
+
+            if (!validateForm()) {
+                statusEl.className = 'form-status form-status-error';
+                statusEl.textContent = 'Please complete all required fields marked with an asterisk (*).';
+                return;
+            }
+
+            submitBtn.disabled = true;
+            const original = submitBtn.innerHTML;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    form.reset();
+                    statusEl.className = 'form-status form-status-success';
+                    statusEl.textContent = 'Thanks — your message has been sent. I usually reply within 48 hours.';
+                } else {
+                    throw new Error('Bad response');
+                }
+            } catch (err) {
+                statusEl.className = 'form-status form-status-error';
+                statusEl.innerHTML = 'Something went wrong sending your message. Please email me directly at ' +
+                    '<a href="mailto:troublecubgames@gmail.com">troublecubgames@gmail.com</a>.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = original;
+            }
         });
     </script>
 </body>

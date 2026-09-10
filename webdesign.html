@@ -1,9 +1,9 @@
 <!--
 Name: Louis Whitmore Jr. 
-CMST 386 - Project 4 Web Design Work Page
+Web Design Work Page
 webdesign.html - Showcases web design and development projects
-Date: 05/05/26
-Version: 1.3
+Date: 08/27/26
+Version: 1.4
 -->
 
 <!DOCTYPE html>
@@ -14,9 +14,9 @@ Version: 1.3
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
         content="Web design and development work by Louis Whitmore Jr. — HTML, CSS, JavaScript projects 
-        including responsive sites, SCSS preprocessing, and course work from UMGC CMST 386.">
+        including responsive sites, SCSS preprocessing.">
     <meta name="keywords"
-        content="Louis Whitmore web design, HTML CSS JavaScript, responsive design, SCSS, web development portfolio, UMGC CMST 386">
+        content="Louis Whitmore web design, HTML CSS JavaScript, responsive design, SCSS, web development portfolio">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Louis Whitmore Jr.">
     <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
@@ -25,7 +25,7 @@ Version: 1.3
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/style.css">
@@ -60,7 +60,8 @@ Version: 1.3
                     </ul>
                 </li>
                 <li><a href="gamedev.html">Flagship Project</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -118,7 +119,8 @@ Version: 1.3
                 </ul>
             </li>
             <li><a href="gamedev.html">Flagship Project</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -194,12 +196,9 @@ Version: 1.3
                     </header>
                     <div class="grid-2">
                         <figure>
-                            <a href="images/portfolioprj4.png" target="_blank"
-                                aria-label="View full size screenshot of this portfolio website">
-                                <img src="images/portfolioprj4.png"
+                            <img src="images/portfolioprj4.png"
                                     alt="Screenshot of this professional portfolio website showing the navy and gold homepage hero section"
                                     width="540" height="360">
-                            </a>
                             <figcaption>Home Page of this portfolio</figcaption>
                         </figure>
                         <div>
@@ -230,39 +229,76 @@ Version: 1.3
                     </header>
                     <div class="grid-3">
                         <article class="work-card">
-                                <figure><a href="images/mythweaver_large.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/mythweaver.jpg"
-                                            alt="CMST 385 Project 4 website overing projects and services"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">HTML5 &bull; CSS3</p>
-                                    <h3>CMST 385 &mdash; Project 4</h3>
-                                    <p>Multi-page software developer studio site covering projects and services, built
-                                        with semantic HTML5 and CSS.</p>
-                                    <h4>2026 &bull; UMGC</h4>
-                                </div>
-                        </article>
-                        <article class="work-card">
-                                <figure><img src="images/386proj3-sc.png"
-                                        alt="CMST 386 Project 3 responsive design website with dark teal theme"
-                                        width="360" height="220"></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">SCSS &bull; Responsive &bull; JS</p>
-                                    <h3>CMST 386 &mdash; Project 3</h3>
-                                    <p>Responsive design and CSS preprocessing — SCSS variables, mixins, nesting, and
-                                        operators. Hamburger navigation and media queries for tablet and phone.</p>
-                                    <h4>2026 &bull; UMGC</h4>
-                                </div>
-                        </article>
-                        <article class="work-card">
                                 <figure><img src="images/portfolioprj4.png"
                                         alt="Louis Whitmore Jr portfolio website thumbnail showing the full eleven page site structure"
-                                        width="360" height="220"></figure>
+                                        width="360" height="220">
+                                    </figure>
                                 <div class="card-body">
                                     <p class="card-tag">HTML5 &bull; CSS3 &bull; JS &bull; Figma</p>
                                     <h3>Portfolio Website</h3>
                                     <p>11-page professional portfolio built from scratch. Full UX process, JavaScript
                                         animations, dropdown navigation, form validation, and responsive design.</p>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="https://lwhitmorej.github.io/mythweaver-interactive/index.html" target="_blank"
+                                        aria-label="View site"><img src="images/mythweaver.jpg"
+                                            alt="Mythweaver Interactive website thumbnail showing projects and services"
+                                            width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">HTML5 &bull; CSS3</p>
+                                    <h3>Mythweaver Interactive Project</h3>
+                                    <p>Multi-page software developer studio site covering projects and services, built
+                                        with semantic HTML5 and CSS.</p>
+                                    <a href="https://lwhitmorej.github.io/mythweaver-interactive/index.html" class="card-link" target="_blank"
+                                    rel="noopener">View Live Site &rarr;</a>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="https://lwhitmorej.github.io/css-preprocessing/preprocessing.html" target="_blank" 
+                                    aria-label="View site"><img src="images/386proj3-sc.png" alt="CSS Preprocessing project thumbnail 
+                                    showing a responsive website with SCSS variables and mixins" width="360" height="220"></a>
+                                </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">SCSS &bull; Responsive &bull; JS</p>
+                                    <h3>CSS Preprocessing Learning Project</h3>
+                                    <p>Responsive design and CSS preprocessing — SCSS variables, mixins, nesting, and
+                                        operators. Hamburger navigation and media queries for tablet and phone.
+                                    </p>
+                                    <a href="https://lwhitmorej.github.io/css-preprocessing/preprocessing.html" class="card-link" target="_blank" 
+                                    rel="noopener">View Live Site &rarr;</a>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="https://lwhitmorej.github.io/web-resource-hub/index.html" target="_blank" aria-label="View site"><img src="images/resourcehub.png"
+                                        alt="Web design project showing a resource hub website with articles and tutorials for web designers"
+                                        width="360" height="220"></a></figure>
+                                <div class="card-body">
+                                    <p class="card-tag">HTML5 &bull; CSS3 &bull; JS &bull; Accessibility</p>
+                                    <h3>Web Design Resource Hub</h3>
+                                    <p>Site that acts as a resource for me as a web designer, providing tutorials, articles, and tools.
+                                        It covers User Experience (UX), Accessibility, Web Security & Optimization, and Responsive Design.
+                                    </p>
+                                    <a href="https://lwhitmorej.github.io/web-resource-hub/index.html" class="card-link" target="_blank" 
+                                    rel="noopener">View Live Site &rarr;</a>
+                                    <h4>2026 &bull; UMGC</h4>
+                                </div>
+                        </article>
+                        <article class="work-card">
+                                <figure><a href="images/Proj3SS.png" target="_blank" aria-label="View full size image"><img src="images/Proj3SSsc.jpg"
+                                        alt="WordPress website project thumbnail"
+                                        width="360" height="220"></a>
+                                    </figure>
+                                <div class="card-body">
+                                    <p class="card-tag">WordPress &bull; PHP &bull; Plugins</p>
+                                    <h3>WordPress Website</h3>
+                                    <p>Site that was built using WordPress with a custom theme and plugins to enhance functionality. It 
+                                        includes a blog, portfolio, and contact form.
+                                    </p>
+                                    <span class="card-note">Live demo unavailable-requires WordPress hosting</span>
                                     <h4>2026 &bull; UMGC</h4>
                                 </div>
                         </article>
@@ -276,7 +312,7 @@ Version: 1.3
     <footer class="site-footer">
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-copy"><em>&copy; 2026 Louis Whitmore Jr. All rights reserved.</em></p>
                 <p class="footer-datetime" id="footerDatetime"></p>
                 <ul class="footer-links">
                     <li><a href="about.html">About</a></li>

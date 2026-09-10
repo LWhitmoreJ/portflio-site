@@ -2,8 +2,8 @@
 Name: Louis Whitmore Jr. 
 CMST 386 - Louis Whitmore Jr. - CSS Stylesheet
 This file contains the styles for the project. 
-Date: 05/05/26
-Version: 1.3
+Date: 09/03/26
+Version: 1.5
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap');
@@ -229,12 +229,16 @@ code {
 }
 
 video {
+    display: block;
     width: 100%;
+    max-width: 720px;
+    aspect-ratio: 1 / 1;
     height: auto;
+    margin: 0 auto;
     border-radius: 4px;
     border: 2px solid var(--gold);
     background: var(--dark-bg);
-    display: flex;
+    object-fit: cover;
 }
 
 /* Contact Form */
@@ -951,6 +955,43 @@ button {
     margin: 0;
 }
 
+.card-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-title-link:hover {
+    color: var(--gold);
+}
+
+.work-card figure a {
+    display: block;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.card-link:hover {
+    border-bottom-color: var(--gold);
+}
+
+.card-note {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text2);
+}
+
 .gallery-grid figure {
     overflow: hidden;
     border-radius: 4px;
@@ -1067,12 +1108,16 @@ button {
     overflow: hidden;
 }
 
-.code-tab-bar {
+.code-tab-bar,
+.media-tab-bar {
     display: flex;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
-.code-tab {
+.code-tab,
+.media-tab {
     font-family: var(--font-body);
     font-size: 13px;
     font-weight: 600;
@@ -1082,31 +1127,319 @@ button {
     border-bottom: 2px solid transparent;
     color: rgba(255, 255, 255, 0.45);
     cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.code-tab.active {
+.code-tab.active,
+.media-tab.active {
     color: var(--gold);
     border-bottom-color: var(--gold);
 }
 
-.code-nav {
+.code-nav,
+.media-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 12px 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.code-nav .btn {
+.code-nav .btn,
+.media-nav .btn {
     border-color: rgba(255, 255, 255, 0.25);
     color: rgba(255, 255, 255, 0.65);
     font-size: 13px;
     padding: 8px 16px;
 }
 
-.code-counter {
+.code-counter,
+.media-counter {
     font-size: 13px;
     color: rgba(255, 255, 255, 0.45);
+}
+
+.media-panel {
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.media-panel img,
+.media-video {
+    width: 100%;
+    max-width: 480px;
+    display: block;
+    margin: 0 auto 18px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+}
+
+.media-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    max-width: 480px;
+    margin: 0 auto 14px;
+}
+
+.media-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    max-width: 720px;
+    margin: 0 auto 20px;
+}
+
+.media-gallery-grid figure {
+    margin: 0;
+}
+
+.media-gallery-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    display: block;
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.media-gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+.media-gallery-grid figcaption {
+    font-size: 11px;
+    color: var(--text2);
+    text-align: center;
+    margin-top: 5px;
+    line-height: 1.3;
+}
+
+.itch-embed {
+    border: 0;
+    max-width: 100%;
+    display: inline-block;
+}
+
+.itch-fallback {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.itch-fallback a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.itch-fallback a:hover {
+    border-bottom-color: var(--gold);
+}
+
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 15, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.lightbox-content img {
+    display: block;
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-caption {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    margin-top: 12px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #14141f;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 700px) {
+    .media-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .media-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.gdd-groups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.gdd-group-title {
+    font-size: 16px;
+    color: var(--gold);
+    text-align: center;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gdd-figure {
+    margin: 0 0 16px;
+}
+
+.gdd-figure img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gdd-figure img:hover {
+    transform: scale(1.02);
+}
+
+.gdd-figure figcaption {
+    font-size: 12px;
+    color: var(--text2);
+    text-align: center;
+    margin-top: 6px;
+}
+
+@media (max-width: 800px) {
+    .gdd-groups {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Clickable Past Project thumbnails */
+.project-thumb-btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.project-thumb-btn img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.project-thumb-btn:hover img {
+    transform: scale(1.04);
+}
+
+.ability-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 24px;
+}
+
+.ability-card h3 {
+    margin-top: 0;
+}
+
+.ability-card h4 {
+    margin: 16px 0 6px;
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+
+.ability-card .ability-role {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text2);
+    margin: 0 0 8px;
+}
+
+.ability-card ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.ability-card li {
+    margin-bottom: 6px;
+}
+
+.planner-figure {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.planner-figure img {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    display: block;
+}
+
+.planner-figure figcaption {
+    font-size: 13px;
+    color: var(--text2);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.lightbox-img {
+    cursor: zoom-in;
+}
+
+.thumb-hint {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text2);
+    text-align: center;
+    padding: 6px 0 0;
+    margin: 0;
 }
 
 /* Process Strips */
@@ -1321,6 +1654,42 @@ button {
     margin-left: 2px;
 }
 
+.form-status {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.5;
+    min-height: 1em;
+}
+
+.form-status-success {
+    color: #3fb27f;
+}
+
+.form-status-error {
+    color: #e06c75;
+}
+
+.form-status a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.form-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact-info-item a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.contact-info-item a:hover {
+    border-bottom-color: var(--gold);
+}
+
 .required-note {
     font-size: 12px;
     color: var(--text2);
@@ -1438,6 +1807,55 @@ button {
     border: 2px solid var(--gold);
     display: block;
     object-fit: cover;
+}
+
+.resume-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.resume-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.resume-link:hover {
+    border-color: var(--gold);
+    transform: translateY(-2px);
+}
+
+.resume-link i {
+    color: var(--gold);
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.resume-link span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.35;
+    font-size: 12px;
+    color: var(--text2);
+}
+
+.resume-link span strong {
+    font-size: 14px;
+    color: var(--text);
+}
+
+@media (max-width: 560px) {
+    .resume-links {
+        grid-template-columns: 1fr;
+    }
 }
 
 .about-skills-grid {

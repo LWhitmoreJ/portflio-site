@@ -1,9 +1,9 @@
 <!--
 Name: Louis Whitmore Jr. 
-CMST 386 - Project 4 Portfolio Overview
+Portfolio Overview
 portfolio.html - Grid of all project cards across the disciplines with filter tabs. 
-Date: 05/05/26
-Version: 1.3
+Date: 08/27/26
+Version: 1.4
 -->
 
 <!DOCTYPE html>
@@ -12,8 +12,8 @@ Version: 1.3
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Project 4- Professional portfolio website & CV by Louis Whitmore Jr. CMST 386">
-    <meta name="keywords" content="Project 4, game development, ui, ux, prototyping, web design">
+    <meta name="description" content="Professional portfolio website & CV by Louis Whitmore Jr.">
+    <meta name="keywords" content="game development, ui, ux, prototyping, web design">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Louis Whitmore Jr.">
     <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
@@ -24,7 +24,7 @@ Version: 1.3
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -56,7 +56,8 @@ Version: 1.3
                     </ul>
                 </li>
                 <li><a href="gamedev.html">Flagship Project</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -117,7 +118,8 @@ Version: 1.3
                 </ul>
             </li>
             <li><a href="gamedev.html">Flagship Project</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -150,8 +152,8 @@ Version: 1.3
                     <!-- Introduction -->
                     <header>
                         <h1>Portfolio</h1>
-                        <h2>All Work</h2>
-                        <p>A complete look at my work across game development, UI/UX design, prototyping, and web
+                        <h2>Standout Projects</h2>
+                        <p>A curated look at my work across game development, UI/UX design, prototyping, and web
                             design. Use the filters below to browse by discipline or view everything at once.</p>
                     </header>
 
@@ -166,122 +168,94 @@ Version: 1.3
                     <!-- Grid Card Section -->
                     <div class="grid-3" id="portfolio-grid">
                         <article class="work-card" data-category="game">
-                                <figure><a href="images/twolittlewounds.jpg" target="_blank"
-                                        aria-label="View full size image"><img src="images/twolittlewounds.jpg"
-                                            alt="Two Little Wounds 3D action RPG game development screenshot"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Game Dev</p>
-                                    <h3>Two Little Wounds</h3>
-                                    <p>Flagship 3D action RPG dungeon-crawler in pre-production. Monster hunters,
-                                        vampires, and a world full of interesting creatures.</p>
-                                    <h4>2025 &ndash; Present</h4>
-                                </div>
+                            <figure><a href="gamedev.html"><img src="images/tlw-keyart_sc.jpg" data-full="images/tlw-keyart.jpg"
+                            alt="Two Little Wounds title art showing glowing red eyes beneath a cracked red crystal" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Game Dev &bull; Flagship</p>
+                                <h3><a href="gamedev.html" class="card-title-link">Two Little Wounds</a></h3>
+                                <p>Flagship action dungeon-crawler. Shipped a playable prototype, now in development with full redesign to combat, camera, and co-op scope documented in design docs.</p>
+                                <a href="gamedev.html" class="card-link">See the flagship project &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="game">
-                                <figure><a href="images/4.jpg" target="_blank" aria-label="View full size image"><img
-                                            src="images/demo.jpg"
-                                            alt="2D pixel art hack and slash demo game with multiple stages and boss fights"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Game Dev</p>
-                                    <h3>2D Hack &amp; Slash Demo</h3>
-                                    <p>Published indie demo — 2D pixel-based hack &amp; slash with 3 stages and 2 boss
-                                        fights. Built in Unity.</p>
-                                    <h4>2023</h4>
-                                </div>
+                            <figure><a href="devwork.html#dev-media"><img src="images/demo.jpg"
+                                        alt="2D pixel art hack and slash demo showing the Soldier fighting enemies" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Game Dev &bull; Unity</p>
+                                <h3><a href="devwork.html#dev-media" class="card-title-link">2D Hack &amp; Slash Demo</a></h3>
+                                <p>Public Unity demo built solo in three weeks: two playable characters with distinct attack sets, four levels, and a multi-phase boss fight.</p>
+                                <a href="devwork.html#dev-media" class="card-link">View project &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="game">
-                                <figure><a href="images/VRxplorer-SubmergedCover.png" target="_blank"
-                                        aria-label="View full size image"><img
-                                            src="images/VRxplorer-SubmergedCover_sc.jpg"
-                                            alt="GPS driven child safety mobile application built in Unity with Mapbox SDK"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Game Dev &bull; AR/VR</p>
-                                    <h3>VRxplorer - Submerged</h3>
-                                    <p>A VR experience about aquatic exploration and marine biology.</p>
-                                    <h4>2024</h4>
-                                </div>
+                            <figure><a href="devwork.html#dev-media"><img src="images/VRxplorer-SubmergedCover_sc.jpg"
+                                        alt="VRxplorer Submerged underwater exploration scene built in Unity" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Game Dev &bull; AR/VR</p>
+                                <h3><a href="devwork.html#dev-media" class="card-title-link">VRxplorer: Submerged</a></h3>
+                                <p>Educational VR dive through underwater caves and a sunken wreck, with species identification and a conservation storyline.</p>
+                                <a href="devwork.html#dev-media" class="card-link">View project &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="uiux">
-                                <figure><a href="images/StoryboardingProj2v2.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/StoryboardingProj2v2.jpg"
-                                            alt="UI UX wireframes and high fidelity mockups created in Figma"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">UI/UX</p>
-                                    <h3>Wireframes &amp; Mockups</h3>
-                                    <p>Wireframes and high-fidelity mockups for web and mobile projects across multiple
-                                        design briefs.</p>
-                                    <h4>2024 &ndash; 2026</h4>
-                                </div>
+                            <figure><a href="uiux.html"><img src="images/StoryboardingProj2v2.jpg"
+                                        alt="Six panel storyboard mapping a user journey through the ineedhelp app" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">UI/UX &bull; Research</p>
+                                <h3><a href="uiux.html" class="card-title-link">Storyboards &amp; Wireframes</a></h3>
+                                <p>User personas, task analysis, storyboards, and mid-fidelity wireframes mapping how a first-time user moves through an app.</p>
+                                <a href="uiux.html" class="card-link">See the case study &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="uiux">
-                                <figure><a href="images/pause.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/pause.png"
-                                            alt="Game user interface design including HUD health bars and inventory systems"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">UI/UX &bull; Game Design</p>
-                                    <h3>Game UI Design</h3>
-                                    <p>HUD design, inventory systems, and in-game menus designed for Two Little Wounds
-                                        pre-production.</p>
-                                    <h4>2025 &ndash; Present</h4>
-                                </div>
+                            <figure><a href="uiux.html"><img src="images/pause.png"
+                                        alt="Exiled pause menu interface with continue, restart, and quit options" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">UI/UX &bull; Game UI</p>
+                                <h3><a href="uiux.html" class="card-title-link">Game UI Design</a></h3>
+                                <p>Pause menus, tutorial overlays, HUD and health systems, and character select screens built for playable Unity prototypes.</p>
+                                <a href="uiux.html" class="card-link">See the game UI work &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="uiux">
-                                <figure><a href="images/ineedhelp1.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/ineedhelp1_sc.jpg"
-                                            alt="Interactive prototypes and user flow diagrams for web and app design projects"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Prototyping</p>
-                                    <h3>Interactive Prototypes</h3>
-                                    <p>Clickable Figma prototypes and user flow documentation for web and mobile design
-                                        briefs.</p>
-                                    <h4>2024 &ndash; 2026</h4>
-                                </div>
+                            <figure><a href="uiux.html"><img src="images/ineedhelp1_sc.jpg"
+                                        alt="High fidelity mockup screens from the ineedhelp mental health support app prototype" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">UI/UX &bull; Prototyping</p>
+                                <h3><a href="uiux.html" class="card-title-link">ineedhelp &mdash; App Prototype</a></h3>
+                                <p>Clickable Figma prototype for a mental health support app concept featuring eleven linked screens across the guest and member flows.</p>
+                                <a href="uiux.html" class="card-link">See the case study &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="web">
-                                <figure><a href="images/portfolioprj4.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/portfolioprj4_scl.png"
-                                            alt="This professional portfolio website built with HTML CSS and JavaScript"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Web Design</p>
-                                    <h3>This Portfolio</h3>
-                                    <p>Full portfolio website built from scratch — HTML, CSS, and JavaScript with
-                                        responsive design and accessibility focus.</p>
-                                    <h4>2026</h4>
-                                </div>
+                            <figure><a href="webdesign.html"><img src="images/portfolioprj4_scl.png"
+                                        alt="This portfolio website built with semantic HTML, CSS, and JavaScript" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Web Design &bull; Front-End</p>
+                                <h3><a href="webdesign.html" class="card-title-link">This Portfolio</a></h3>
+                                <p>Eleven-page site hand-coded from research through to build created using semantic HTML5, custom CSS architecture, vanilla JS, and WCAG-compliant contrast.</p>
+                                <a href="webdesign.html" class="card-link">View project &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="web">
-                                <figure><a href="images/mythweaver_large.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/mythweaver.jpg"
-                                            alt="Multi-page software developer studio site covering projects and services, built
-                                        with semantic HTML5 and CSS."
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Web Design</p>
-                                    <h3>CMST 385 &mdash; Project 4</h3>
-                                    <p>Multi-page software developer studio site covering projects and services, built
-                                        with semantic HTML5 and CSS.</p>
-                                    <h4>2026</h4>
-                                </div>
+                            <figure><a href="webdesign.html"><img src="images/mythweaver.jpg"
+                                        alt="Mythweaver Interactive multi-page studio website homepage" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Web Design</p>
+                                <h3><a href="webdesign.html" class="card-title-link">Mythweaver Interactive</a></h3>
+                                <p>Multi-page studio site covering projects and services, built with semantic HTML5 and CSS. Live on GitHub Pages.</p>
+                                <a href="webdesign.html" class="card-link">View live site &rarr;</a>
+                            </div>
                         </article>
                         <article class="work-card" data-category="web">
-                                <figure><a href="images/386proj3.png" target="_blank"
-                                        aria-label="View full size image"><img src="images/386proj3-sc.png"
-                                            alt="CMST 386 Project 3 responsive design website with SCSS preprocessing"
-                                            width="360" height="220"></a></figure>
-                                <div class="card-body">
-                                    <p class="card-tag">Web Design &bull; SCSS</p>
-                                    <h3>CMST 386 &mdash; Project 3</h3>
-                                    <p>A website on responsive design and CSS preprocessing, implementing SCSS
-                                        variables, mixins, nesting, and media queries.</p>
-                                    <h4>2026</h4>
-                                </div>
+                            <figure><a href="webdesign.html"><img src="images/386proj3-sc.png"
+                                        alt="Responsive website built with SCSS preprocessing and media queries" width="360" height="220"></a></figure>
+                            <div class="card-body">
+                                <p class="card-tag">Web Design &bull; SCSS</p>
+                                <h3><a href="webdesign.html" class="card-title-link">CSS Preprocessing Project</a></h3>
+                                <p>Responsive site implementing SCSS variables, mixins, nesting, and media queries, with a hamburger nav for tablet and phone.</p>
+                                <a href="webdesign.html" class="card-link">View live site &rarr;</a>
+                            </div>
                         </article>
                     </div>
                     <a href="#top" class="back-to-top">&#8593; Back to top</a>
@@ -294,7 +268,7 @@ Version: 1.3
     <footer class="site-footer">
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-copy"><em>&copy; 2026 Louis Whitmore Jr. All rights reserved.</em></p>
                 <p class="footer-datetime" id="footerDatetime"></p>
                 <ul class="footer-links">
                     <li><a href="about.html">About</a></li>

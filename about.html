@@ -1,9 +1,9 @@
 <!--
 Name: Louis Whitmore Jr. 
-CMST 386 - Project 4 About Page
-about.html - Professional bio and resume download link  
-Date: 05/05/26
-Version: 1.3
+Portfolio About Page
+about.html - Professional bio and role-specific resume downloads  
+Date: 08/27/26
+Version: 1.4
 -->
 
 <!DOCTYPE html>
@@ -16,8 +16,8 @@ Version: 1.3
         content="About Louis Whitmore Jr. — game designer, Unity developer, UI/UX designer, and founder 
         of TroubleCub Games. UMGC Web and Digital Design graduate, December 2026.">
     <meta name="keywords"
-        content="Louis Whitmore about, game designer background, TroubleCub Games founder, Unity developer, 
-        UMGC graduate, web digital design, Florida">
+        content="About Louis Whitmore Jr. — game designer, Unity developer, UI/UX designer, and founder 
+        of TroubleCub Games. Web and Digital Design graduate, December 2026.">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Louis Whitmore Jr.">
     <meta name="copyright" content="© 2026 Louis Whitmore Jr.">
@@ -26,7 +26,7 @@ Version: 1.3
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&amp;family=Raleway:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="CSS/style.css">
@@ -60,7 +60,8 @@ Version: 1.3
                     </ul>
                 </li>
                 <li><a href="gamedev.html">Flagship Project</a></li>
-                <li><a href="services.html">Services</a></li>
+                <!-- <li><a href="services.html">Services</a></li> -->
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
@@ -118,7 +119,8 @@ Version: 1.3
                 </ul>
             </li>
             <li><a href="gamedev.html">Flagship Project</a></li>
-            <li><a href="services.html">Services</a></li>
+            <!-- <li><a href="services.html">Services</a></li> -->
+            <li><a href="about.html" class="active">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
@@ -163,15 +165,30 @@ Version: 1.3
                                 TroubleCub Games, an independent game studio I built around a vision to create 
                                 unique experiences through gameplay.</p>
                             <p>My background spans four disciplines: game development, immersive experience design,
-                                UI/UX, and web design. I worked on small projects as a hobbyist, published an indie 
-                                game demo that gathered real player feedback, and I am currently in pre-production 
-                                on my flagship 3D action RPG, Two Little Wounds.</p>
+                                UI/UX, and web design. I worked on small projects as a hobbyist, published an indie
+                                game demo that gathered real player feedback, and I am now redesigning that demo
+                                into my flagship 3D action RPG, Two Little Wounds.</p>
                             <p>I am not just building a portfolio. I am building a studio, a universe, and a creative
                                 career built to last.</p>
-                            <a href="files/LouisWhitmoreJr-Resume.pdf" class="btn btn-primary" download
-                                style="margin-top:16px;display:inline-flex;align-items:center;gap:10px;">
-                                <i class="fa-solid fa-download" aria-hidden="true"></i> Download Resume
-                            </a>
+                            <p style="margin-top:20px;margin-bottom:10px;"><strong>Resumes</strong> &mdash; tailored by role:</p>
+                            <div class="resume-links">
+                                <a href="files/Louis_WhitmoreJr_Resume-JD.pdf" class="resume-link" download>
+                                    <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+                                    <span><strong>Game Design</strong>Junior Game Designer / Unity Developer</span>
+                                </a>
+                                <a href="files/Louis_WhitmoreJr_Resume-Tes.pdf" class="resume-link" download>
+                                    <i class="fa-solid fa-bug" aria-hidden="true"></i>
+                                    <span><strong>QA</strong>QA Tester / Game Tester</span>
+                                </a>
+                                <a href="files/Louis_WhitmoreJr_Resume-Web.pdf" class="resume-link" download>
+                                    <i class="fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                                    <span><strong>UI/UX</strong>Game UI / UI-UX / Front-End</span>
+                                </a>
+                                <a href="files/Louis_WhitmoreJr_Resume-Wrt.pdf" class="resume-link" download>
+                                    <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                                    <span><strong>Narrative</strong>Narrative Designer / Game Writer</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -207,6 +224,12 @@ Version: 1.3
                         <div class="about-skill-item"><i class="fa-solid fa-vr-cardboard"></i>
                             <h3>AR/VR</h3>
                         </div>
+                        <div class="about-skill-item"><i class="fa-brands fa-git-alt"></i>
+                            <h3>Git / GitHub</h3>
+                        </div>
+                        <div class="about-skill-item"><i class="fa-brands fa-jira"></i>
+                            <h3>Jira</h3>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -218,13 +241,19 @@ Version: 1.3
                             <header>
                                 <h2>TroubleCub Games</h2>
                             </header>
-                            <p>TroubleCub Games is an independent game studio founded with one purpose — to build worlds
-                                worth living in. The studio is the creative home for Two Little Wounds, a flagship 3D
-                                action dungeon-crawler set in a fully realized Transylvania-era universe built for
-                                expansion across games, animated series, and film.</p>
-                            <p>TroubleCub Games transitions to full-time operation in January 2027. The World Bible is
-                                written. The prototype is in development. The franchise is mapped. The only thing left
-                                is to build it.</p>
+                            <p>TroubleCub Games is the culmination of years of dreams and inspiration that spawned from 
+                                playing great and unforgettable games. TroubleCub is a media development company owned 
+                                and operated by Louis Whitmore Jr. We create RPG's, action, and adventure games. Some of 
+                                the companies that inspired us and set us on our path are Bioware, Bethesda, Square Enix, 
+                                and Naughty Dog. 
+                            </p>
+                            <p>
+                                In every single project we are apart of, we strive to inject great story, interesting 
+                                characters, fun gameplay loops, and memorable plot. 
+                            </p>
+                            <p>TroubleCub Games transitions to full-time operation in January 2027. The first prototype
+                                shipped and gathered player feedback, the World Bible is being written, and the
+                                redesign is scoped and documented. The next step is building it.</p>
                             <a href="gamedev.html" class="btn btn-outline" style="margin-top:16px;">See the Flagship
                                 Game &#8594;</a>
                         </div>
@@ -243,7 +272,7 @@ Version: 1.3
     <footer class="site-footer">
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-copy"><em>CMST 386 &mdash; &copy; 2026 Louis Whitmore Jr.</em></p>
+                <p class="footer-copy"><em>&copy; 2026 Louis Whitmore Jr. All rights reserved.</em></p>
                 <p class="footer-datetime" id="footerDatetime"></p>
                 <ul class="footer-links">
                     <li><a href="about.html">About</a></li>
