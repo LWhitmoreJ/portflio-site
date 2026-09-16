@@ -1,0 +1,423 @@
+<!-- TroubleCub Games — Confidential Partner Brief
+     Private page. Not linked from the main site nav or sitemap.
+     Do not index. Share only via direct link. 
+     Rename this file to an obscure filename before uploading (see note at bottom of file).
+     Date: 2026 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="referrer" content="no-referrer">
+    <title>TroubleCub Games — Partner Brief</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #1a3a5c;
+            --navy-deep: #0f2338;
+            --gold: #c9a832;
+            --bg: #faf8f4;
+            --bg-alt: #f0ede6;
+            --text: #1a3a5c;
+            --text-muted: #4a6580;
+            --white: #ffffff;
+            --border: #ddd8ce;
+            --font-head: 'Oswald', sans-serif;
+            --font-body: 'Raleway', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .wrap { max-width: 760px; margin: 0 auto; padding: 60px 24px 100px; }
+
+        /* ---------- GATE ---------- */
+        #gate {
+            position: fixed; inset: 0; background: var(--navy-deep);
+            display: flex; align-items: center; justify-content: center;
+            z-index: 999; padding: 24px;
+        }
+        .gate-box {
+            background: var(--white); border-radius: 6px; padding: 40px 32px;
+            max-width: 380px; width: 100%; text-align: center;
+            border-top: 4px solid var(--gold);
+        }
+        .gate-box h2 { font-family: var(--font-head); color: var(--navy); font-size: 20px; margin-bottom: 8px; }
+        .gate-box p { color: var(--text-muted); font-size: 14px; margin-bottom: 20px; }
+        .gate-box input {
+            width: 100%; padding: 12px 14px; font-size: 15px; font-family: var(--font-body);
+            border: 1.5px solid var(--border); border-radius: 4px; margin-bottom: 12px; text-align: center;
+        }
+        .gate-box button {
+            width: 100%; padding: 12px; background: var(--navy); color: var(--white);
+            border: none; border-radius: 4px; font-family: var(--font-body); font-weight: 600;
+            font-size: 15px; cursor: pointer;
+        }
+        .gate-box button:hover { background: var(--navy-deep); }
+        .gate-error { color: #c0392b; font-size: 13px; margin-top: 10px; display: none; }
+        #content { display: none; }
+
+        /* ---------- HEADER ---------- */
+        .eyebrow {
+            font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+            color: var(--gold); margin-bottom: 10px; display: block;
+        }
+        h1 {
+            font-family: var(--font-head); font-size: 34px; font-weight: 700; color: var(--navy);
+            line-height: 1.2; margin-bottom: 8px;
+        }
+        .subtitle { font-size: 17px; color: var(--text-muted); margin-bottom: 20px; }
+        .confidential-note {
+            background: var(--bg-alt); border-left: 3px solid var(--gold); padding: 12px 16px;
+            font-size: 13px; color: var(--text-muted); font-style: italic; border-radius: 0 4px 4px 0;
+            margin-bottom: 40px;
+        }
+
+        /* ---------- SECTIONS ---------- */
+        section { margin-bottom: 44px; }
+        h2 {
+            font-family: var(--font-head); font-size: 22px; font-weight: 600; color: var(--navy);
+            margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid var(--gold);
+            display: inline-block;
+        }
+        p { margin-bottom: 14px; font-size: 15.5px; }
+        p:last-child { margin-bottom: 0; }
+        strong { color: var(--navy); }
+
+        ul.plain { list-style: none; margin-top: 10px; }
+        ul.plain li {
+            padding: 8px 0 8px 22px; position: relative; font-size: 15px; border-bottom: 1px solid var(--border);
+        }
+        ul.plain li:last-child { border-bottom: none; }
+        ul.plain li::before {
+            content: '\2022'; color: var(--gold); font-weight: 700; position: absolute; left: 0; font-size: 18px;
+        }
+
+        /* ---------- TIMELINE ---------- */
+        .timeline { position: relative; margin: 24px 0 8px; padding-left: 28px; }
+        .timeline::before {
+            content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--border);
+        }
+        .t-item { position: relative; padding-bottom: 28px; }
+        .t-item:last-child { padding-bottom: 0; }
+        .t-item::before {
+            content: ''; position: absolute; left: -28px; top: 3px; width: 13px; height: 13px;
+            border-radius: 50%; background: var(--gold); border: 2px solid var(--white); box-shadow: 0 0 0 2px var(--gold);
+        }
+        .t-item.milestone::before { background: var(--navy); box-shadow: 0 0 0 2px var(--navy); width: 15px; height: 15px; left: -29px; }
+        .t-item.thread::before { background: var(--white); border: 2px solid var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+        .t-when {
+            font-family: var(--font-head); font-size: 13px; font-weight: 600; color: var(--gold);
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 3px;
+        }
+        .t-item.milestone .t-when { color: var(--navy); }
+        .t-what { font-size: 15px; color: var(--text); }
+        .t-what strong { display: block; font-size: 16px; margin-bottom: 4px; }
+        .t-what p { font-size: 14.5px; margin-bottom: 8px; }
+        .t-what p:last-child { margin-bottom: 0; }
+
+        .thread-box {
+            background: var(--bg-alt); border: 1px dashed var(--border);
+            border-radius: 4px; padding: 14px 16px; margin-top: 10px; font-size: 14px; color: var(--text-muted);
+        }
+
+        /* ---------- CARDS ---------- */
+        .card {
+            background: var(--white); border: 1px solid var(--border); border-left: 3px solid var(--gold);
+            border-radius: 0 4px 4px 0; padding: 18px 20px; margin-bottom: 14px;
+        }
+        .card h3 { font-family: var(--font-head); font-size: 16px; color: var(--navy); margin-bottom: 6px; }
+        .card p { font-size: 14.5px; margin-bottom: 0; color: var(--text-muted); }
+
+        .pillbar { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .pill {
+            font-size: 12.5px; font-weight: 600; padding: 5px 13px; border-radius: 30px;
+            border: 1.5px solid var(--navy); color: var(--navy);
+        }
+
+        .callout {
+            background: var(--bg-alt); border: 1px solid var(--border); border-top: 3px solid var(--gold);
+            border-radius: 4px; padding: 18px 20px; font-size: 14.5px; color: var(--text-muted); font-style: italic;
+        }
+
+        .stat-row { display: flex; gap: 12px; margin: 14px 0; flex-wrap: wrap; }
+        .stat-box {
+            flex: 1; min-width: 120px; background: var(--white); border: 1px solid var(--border);
+            border-radius: 4px; text-align: center; padding: 14px 8px;
+        }
+        .stat-num { font-family: var(--font-head); font-size: 26px; font-weight: 700; color: var(--navy); }
+        .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+        footer {
+            border-top: 1px solid var(--border); padding-top: 24px; margin-top: 50px;
+            font-size: 13px; color: var(--text-muted); text-align: center;
+        }
+        footer .brand { font-family: var(--font-head); color: var(--navy); font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 26px; }
+            .wrap { padding: 40px 18px 80px; }
+            .stat-row { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===================== PASSPHRASE GATE ===================== -->
+    <!-- Not real security — a deterrent only. Change PASSPHRASE below. -->
+    <div id="gate">
+        <div class="gate-box">
+            <h2>TroubleCub Games</h2>
+            <p>This page is private. Please enter the passphrase you were given.</p>
+            <input type="password" id="passInput" placeholder="Passphrase" autocomplete="off">
+            <button onclick="checkPass()">Continue</button>
+            <p class="gate-error" id="gateError">That's not quite right. Please check and try again.</p>
+        </div>
+    </div>
+
+    <!-- ===================== CONTENT ===================== -->
+    <div id="content">
+        <div class="wrap">
+
+            <span class="eyebrow">TroubleCub Games &bull; Confidential</span>
+            <h1>Two Little Wounds<br>Plan Overview</h1>
+            <p class="subtitle">Where things stand, and the plan from today through the public campaign in 2028.</p>
+            <div class="confidential-note">
+                This page is shared privately for discussion purposes only. Please don't forward the link or post any of this publicly. A few of the details below depend on staying quiet until the right moment.
+            </div>
+
+            <!-- ===================== THE STUDIO & GAME ===================== -->
+            <section>
+                <h2>The Short Version</h2>
+                <p><strong>TroubleCub Games</strong> is an independent game studio founded by Louis Whitmore Jr. It's built around one flagship project, with a long-term plan to grow it into a franchise.</p>
+                <p><strong>Two Little Wounds</strong> is a co-op action game about two monster hunters: a big, witty swordsman and a sharp, no-nonsense rogue. They take on a routine job that turns into something much bigger. The tone is dark fantasy with real humor running through it. The danger is genuine, and the characters' banter makes it land harder, not softer.</p>
+                <p>Visually, it's built to look like a dark, stylish comic book brought to life. Bold linework, dramatic lighting, and a look nobody else in this genre is doing. The world is designed from day one to support sequels, and eventually other formats like animation or comics, once the first game earns that.</p>
+            </section>
+
+            <!-- ===================== THE TIMELINE (merged with audience strategy) ===================== -->
+            <section>
+                <h2>The Timeline</h2>
+                <p>Everything below runs on two tracks at once. One is building the game. The other is quietly building an audience for it, in a way that's a little unusual. Both are timed to come together in early 2028.</p>
+
+                <div class="timeline">
+
+                    <div class="t-item">
+                        <div class="t-when">Now &ndash; Dec 2026</div>
+                        <div class="t-what">
+                            <strong>Final stretch of school, groundwork begins</strong>
+                            <p>The project gets set up and the game's story and world get locked down. A content channel also quietly begins during this window. It doesn't look like a typical "making of" series. That's intentional, and it plays a bigger role later in this timeline.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item milestone">
+                        <div class="t-when">December 2026</div>
+                        <div class="t-what"><strong>Graduation. Full-time work on TroubleCub begins.</strong></div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Winter 2027 &bull; Jan &ndash; Mar</div>
+                        <div class="t-what">
+                            <strong>Building the first hero</strong>
+                            <p>Work centers entirely on one character, the swordsman. Movement, combat, and the core fighting system all get built and tested here first. Nothing else gets added until this feels genuinely good to play, since every later phase depends on it.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Spring 2027 &bull; Apr &ndash; Jun</div>
+                        <div class="t-what">
+                            <strong>Enemies and a real interface</strong>
+                            <p>Three distinct enemy types get built, along with health bars, on-screen readouts, and everything needed for a fight to actually read as a fight rather than a test scene.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Summer 2027 &bull; Jul &ndash; Sep</div>
+                        <div class="t-what">
+                            <strong>The second hero joins</strong>
+                            <p>The rogue becomes playable, alongside a companion character and a system that lets both heroes grow new abilities the more they're used. This is also where the two characters first come together as a real team.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Fall 2027 &bull; Oct &ndash; Dec</div>
+                        <div class="t-what">
+                            <strong>The level itself gets built</strong>
+                            <p>A single dungeon comes together, with a supporting boss fight partway through and one large final encounter at the end. This is the complete experience the game will be judged on.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item thread">
+                        <div class="t-when">Running Alongside All of 2027</div>
+                        <div class="t-what">
+                            <strong>The audience-building thread</strong>
+                            <p>This is the part of the plan we think is genuinely different from how most developers approach this.</p>
+                            <p>Instead of typical development videos, which most people scroll past, the channel's real content is entertaining comedy sketches: gaming humor, fantasy parody, the kind of thing that works completely on its own with no game ever mentioned.</p>
+                            <p>Two of the recurring characters in that content are secretly the game's two heroes. Over the course of the year, they take on a handful of small freelance jobs within the sketches. One of those jobs goes sideways and turns into a short multi-part story. Each job reveals a little more of who these two are and what world they live in, without the game ever being named.</p>
+                            <div class="thread-box">
+                                By the end of the year, sharp-eyed viewers tend to start noticing a pattern and wondering if something bigger connects it all. That noticing is the point. It's what makes the eventual reveal land as something people feel they discovered, rather than something they were simply told.
+                            </div>
+                            <p style="margin-top: 10px;">A private community (Discord) and an email list are also being built quietly this entire time, so there's a direct, owned line to supporters that doesn't depend on any single platform or algorithm.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Early 2028 &bull; Jan &ndash; Mar</div>
+                        <div class="t-what">
+                            <strong>Art, sound, voice, and testing</strong>
+                            <p>Final art, audio, and voice work get layered on. The game is then tested with real outside players who have never seen it before. Once that's done, a trailer gets cut from the finished result.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item milestone">
+                        <div class="t-when">March 2028</div>
+                        <div class="t-what">
+                            <strong>The reveal</strong>
+                            <p>The final freelance job from the sketches publishes. It reveals, for the first time, that this was Two Little Wounds all along. Anyone who noticed the pattern over the past year feels like they found it themselves. A reveal built this way also tends to draw outside press and reaction coverage on its own, well beyond the existing audience.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Days Later, March 2028</div>
+                        <div class="t-what">
+                            <strong>Trailer and Kickstarter page go live</strong>
+                            <p>A short gameplay trailer publishes, and the Kickstarter page opens for the first time.</p>
+                            <p><strong>For anyone unfamiliar with Kickstarter:</strong> it's a crowdfunding platform. People pledge money toward a project before it's finished, and if enough is raised by the deadline, the project gets funded and backers receive rewards in return, usually a copy of the finished game.</p>
+                            <p>Before the real campaign opens, Kickstarter allows a "coming soon" page that people can follow in advance. How someone found that page changes how likely they are to actually pledge once it goes live:</p>
+                            <div class="stat-row">
+                                <div class="stat-box"><div class="stat-num">~31%</div><div class="stat-label">Followed the Kickstarter page directly</div></div>
+                                <div class="stat-box"><div class="stat-num">~5%</div><div class="stat-label">On the email list</div></div>
+                                <div class="stat-box"><div class="stat-num">~2%</div><div class="stat-label">Following on social media only</div></div>
+                            </div>
+                            <p>This is part of why the Kickstarter page doesn't go up any earlier than this. A public, searchable Kickstarter page would be a reveal all by itself, months before the real one. Waiting means the page opens to an audience that's already paying attention, instead of starting from zero.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item milestone">
+                        <div class="t-when">April 2028</div>
+                        <div class="t-what">
+                            <strong>Kickstarter campaign launches</strong>
+                            <p>Thirty days. Funds the full development of the complete game.</p>
+                        </div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">May 2028</div>
+                        <div class="t-what"><strong>Campaign closes.</strong></div>
+                    </div>
+
+                    <div class="t-item">
+                        <div class="t-when">Summer 2028</div>
+                        <div class="t-what">
+                            <strong>Full production begins</strong>
+                            <p>Funded, scoped, and scheduled. This is when work starts on building the rest of the complete game.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- ===================== FUNDING ===================== -->
+            <section>
+                <h2>How It Gets Funded</h2>
+                <p>A deliberate choice has been made not to pursue a traditional game publisher. That route typically means giving up creative control and a large share of future revenue in exchange for upfront money. Instead, funding comes from sources that don't require giving up ownership of the game or the studio.</p>
+                <ul class="plain">
+                    <li><strong>The Kickstarter campaign</strong> above, funded by the audience built over the prior year</li>
+                    <li><strong>Game industry and arts grants</strong> that fund development without taking equity or revenue, including a major no-strings grant program run by a leading game engine company, along with independent arts funding</li>
+                    <li><strong>Optional ongoing supporter funding</strong> for people who want to help before the campaign even launches</li>
+                </ul>
+                <p style="margin-top: 16px;">On pricing, the game will be sold once, at a fair, honest price. No microtransactions. No loot boxes. Ever. That commitment is part of the pitch to players, not just a business decision.</p>
+            </section>
+
+            <!-- ===================== VALUES ===================== -->
+            <section>
+                <h2>What Kind of Company This Is</h2>
+                <p>A short list of commitments that shape every decision, business and creative:</p>
+                <div class="pillbar">
+                    <span class="pill">Ships complete games</span>
+                    <span class="pill">No microtransactions, ever</span>
+                    <span class="pill">Made by hand</span>
+                    <span class="pill">No crunch culture</span>
+                    <span class="pill">Credits every contributor</span>
+                    <span class="pill">Honest with the community</span>
+                </div>
+            </section>
+
+            <!-- ===================== BEYOND THE FIRST GAME ===================== -->
+            <section>
+                <h2>Beyond the First Game</h2>
+                <p>Two Little Wounds is being built as the start of something larger, not a one-off. The world, its history, and its characters are designed with enough depth to support sequels on their own. Once the first game has shipped and found its audience, that same foundation could support future formats, potentially animation, comics, or other media. A handful of other original game worlds have grown into much bigger properties the same way.</p>
+                <p>That's a future step, not a current plan in motion. It's part of why the world is being built this thoroughly from day one.</p>
+            </section>
+
+            <footer>
+                <div class="brand">TroubleCub Games</div>
+                <p>This page is private and shared for discussion purposes only.<br>Please reach out directly with any questions.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // ============================================================
+        // PASSPHRASE GATE — deterrent only, not real security.
+        // Anyone who views page source can read the passphrase below.
+        // Change this before sharing the link.
+        // ============================================================
+        const PASSPHRASE = "twolittlewounds"; // <-- CHANGE THIS
+
+        function checkPass() {
+            const input = document.getElementById('passInput').value.trim().toLowerCase();
+            if (input === PASSPHRASE.toLowerCase()) {
+                document.getElementById('gate').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+                sessionStorage.setItem('tc_gate_passed', 'yes');
+            } else {
+                document.getElementById('gateError').style.display = 'block';
+            }
+        }
+
+        document.getElementById('passInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') checkPass();
+        });
+
+        // Skip the gate on repeat visits within the same browser session
+        if (sessionStorage.getItem('tc_gate_passed') === 'yes') {
+            document.getElementById('gate').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+
+<!--
+    BEFORE YOU UPLOAD THIS FILE:
+
+    1. Rename it to something obscure, not "partner.html" or "brief.html".
+       Something like a random string works well, for example tc-x7k2m9.html.
+       That way the link itself is hard to guess even without the passphrase.
+
+    2. Change the PASSPHRASE variable near the bottom of the file to
+       something only you and your partner know.
+
+    3. Upload it to your site's root or a folder, but do NOT add a link
+       to it anywhere in your nav, homepage, or sitemap.xml. It should
+       only be reachable if someone has the exact URL.
+
+    4. Send the link and the passphrase to your partner separately,
+       for example the link by email and the passphrase by text, so a
+       single intercepted message doesn't expose both.
+-->
